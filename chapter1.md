@@ -7,17 +7,23 @@ Rule number 1 of the Puppet Club:
 
 ---
 
-It's ok if you done so in the past. We all have. It just comes with the job. Having said that, you know is not cool, right?
+To avoid any unexpected behavior, your development should resemble your production environment.
 
-The hardest part of writing and testing Puppet code is to be able to write and test Puppet code, is having and environment that truly resembles production.
+That means:
+* Run the same OS
+* Run the same distribution and version
+* Run the same version of Puppet
 
-You want your code to run. But if you are developing under a Mac system and your production server is running Centos 7, how can you be sure that what you wrote will actually work?
+It is uncommon that your working station is an exact match to your production server. To solve this situation we can use virtualization to provide a host that will match our production server.
 
-Most of the time we don't. 
+## Vagrant
 
-So the solution is quite simple. Get a clone of your production environment and develop under it.
+Vagrant ( https://www.vagrantup.com/ ) is a tool that helps us provision and manage VMs. It works with common virtualization tools like Virtualbox, Vmware and Amazon EC2. 
 
-Here is a list of tools that will help us with that task.
+The Vagrant site reads "Create and configure lightweight, reproducible, and portable development environments.".
 
-
+Vagrant accomplished this by:
+* Providing a standard way to share base Os boxes.
+* Allow your to describe how to provision your VM.
+* Mount and sync your local source into the VM.
 
