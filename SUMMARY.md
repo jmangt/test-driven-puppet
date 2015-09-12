@@ -2,5 +2,5 @@
 
 * [Introduction](README.md)
 * [1. Setup](chapter1.md)
-   * Vagrant
+   * [Vagrant](vagrant.md)
 
