@@ -27,15 +27,60 @@ Vagrant accomplished this by:
 * Allow your to describe how to provision your VM.
 * Mount and sync your local source into the VM.
 
-### Install Vagrant
+### Installing Vagrant
 
 Vagrant needs a virtualization provider to be able run. The default provider is [Virtualbox](https://www.virtualbox.org/). If your system doesn't have it installed, go to the [Downloads section](https://www.virtualbox.org/wiki/Downloads) of the site and get the corresponding installer for your system. 
 
 After Virtualbox is intalled go the [Downloads section](https://www.vagrantup.com/downloads.html) of the Vagrant Site to download and run the appropriate installer for your system.
 
-### 
+### Starting a Vagrant project
 
+Create a directory where to host your vagrant project or use a directory that contains the source of a current project.
 
+```
+# create a new project
+$ mkdir ~/my-vagrant-project
+$ cd ~/my-vagrant-project
+```
+
+Vagrant configuration is managed by a `Vagrantfile` ( r[ead it's documentation](https://docs.vagrantup.com/v2/vagrantfile/index.html) ). You can add a basic `Vagrantfile` to your project by using the `vagrant init` command.
+
+```
+# initialize a Vagrant file
+$ vagrant init
+
+A `Vagrantfile` has been placed in this directory. You are now
+ready to `vagrant up` your first virtual environment! Please read
+the comments in the Vagrantfile as well as documentation on
+`vagrantup.com` for more information on using Vagrant.
+```
+
+Lets take a look at the file we just created. After removing it's comments you can focus on two facts.
+
+First, the `Vagrantfile` is a [Ruby](https://www.ruby-lang.org/en/) file, thus its contents can be manipulated just like any Ruby script.
+
+Second, the `configure` class method takes arguments that allow us to define the image that our VM should be booted from.
+
+Our default `Vagranfile` uses the `base` image to boot our VM. This is a place holder were we are expected to set the name of the vagrant box to use.
+
+```
+# a Vagrant file comments removed
+$ cat Vagrantfile
+
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure(2) do |config|
+  config.vm.box = "base"
+end
+```
+
+Lets re initialize our `Vagrantfile` with an Ubuntu 14.04 box.
+
+```
+$ rm Vagrantfile
+$ vagrant init ubuntu/trusty64
+```
 
 
 
