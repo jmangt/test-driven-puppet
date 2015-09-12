@@ -16,6 +16,8 @@ That means:
 
 It is uncommon that your working station is an exact match to your production server. To solve this situation we can use virtualization to provide a host that will match our production server.
 
+Let's take a look at a tool called Vagrant, that will make it easy to manage our VM setup.
+
 ## Vagrant
 
 [Vagrant]( https://www.vagrantup.com/ ) is a tool that helps us provision and manage VMs. It works with common virtualization tools like Virtualbox, Vmware and Amazon EC2. 
