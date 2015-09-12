@@ -80,7 +80,20 @@ Lets re initialize our `Vagrantfile` with an Ubuntu 14.04 box.
 ```
 $ rm Vagrantfile
 $ vagrant init ubuntu/trusty64
+...
+$ cat Vagrantfile
+
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure(2) do |config|
+  config.vm.box = "ubuntu/trusty64"
+end
 ```
+
+Now we are ready to provision our VM.
+
+### Provisioning
 
 
 
