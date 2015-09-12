@@ -27,3 +27,17 @@ Vagrant accomplished this by:
 * Allow your to describe how to provision your VM.
 * Mount and sync your local source into the VM.
 
+### Install Vagrant
+
+Go the Downloads (https://www.vagrantup.com/downloads.html) section of the Vagrant Site and download the appropriate installer.
+
+Vagrant needs a virtualization provider to be able
+
+When you run the installer Vagrant will install Virtualbox as a default virtualization provider. Later on you can switch to other virtualization providers like Vmware, AWS or Docker.
+
+
+
+
+
+
+
