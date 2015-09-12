@@ -88,12 +88,30 @@ $ cat Vagrantfile
 
 Vagrant.configure(2) do |config|
   config.vm.box = "ubuntu/trusty64"
+ 
 end
 ```
 
 Now we are ready to provision our VM.
 
 ### Provisioning
+
+The easiest way to provision a Vagrant box is to use the Shell provisioner. 
+
+Uncomment the `config.vm.provision` section so your `Vagrantfile` so it looks like this:
+
+```
+Vagrant.configure(2) do |config|
+  config.vm.box = "ubuntu/trusty64"
+  
+  config.vm.provision "shell", inline: <<-SHELL
+    sudo apt-get update
+    sudo apt-get install -y apache2
+  SHELL
+end
+```
+
+The provisioner section will run the first time you start a new system. If it is successful, it will mark the system as provisioned and will not run it again unless your force a re provision.
 
 
 
