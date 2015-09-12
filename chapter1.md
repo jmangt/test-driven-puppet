@@ -18,7 +18,7 @@ It is uncommon that your working station is an exact match to your production se
 
 ## Vagrant
 
-Vagrant ( https://www.vagrantup.com/ ) is a tool that helps us provision and manage VMs. It works with common virtualization tools like Virtualbox, Vmware and Amazon EC2. 
+[Vagrant]( https://www.vagrantup.com/ ) is a tool that helps us provision and manage VMs. It works with common virtualization tools like Virtualbox, Vmware and Amazon EC2. 
 
 The Vagrant site reads "Create and configure lightweight, reproducible, and portable development environments.".
 
@@ -29,11 +29,9 @@ Vagrant accomplished this by:
 
 ### Install Vagrant
 
-Go the Downloads (https://www.vagrantup.com/downloads.html) section of the Vagrant Site and download the appropriate installer.
+Vagrant needs a virtualization provider to be able run. The default provider is [Virtualbox](https://www.virtualbox.org/). If your system doesn't have it installed, go to the [Downloads section](https://www.virtualbox.org/wiki/Downloads) of the site and get the corresponding installer for your system. 
 
-Vagrant needs a virtualization provider to be able
-
-When you run the installer Vagrant will install Virtualbox as a default virtualization provider. Later on you can switch to other virtualization providers like Vmware, AWS or Docker.
+After Virtualbox is intalled go the [Downloads section](https://www.vagrantup.com/downloads.html) of the Vagrant Site to download and run the appropriate installer for your system.
 
 
 
