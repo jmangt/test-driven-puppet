@@ -82,7 +82,7 @@ The easiest way to provision a Vagrant box is to use the Shell provisioner.
 
 Uncomment the `config.vm.provision` section so your `Vagrantfile` so it looks like this:
 
-```
+```ruby
 Vagrant.configure(2) do |config|
   config.vm.box = "ubuntu/trusty64"
   
@@ -94,3 +94,46 @@ end
 ```
 
 The provisioner section will run the first time you start a new system. If it is successful, it will mark the system as provisioned and will not run it again unless your force a re provision.
+
+### Starting your box for the first time
+
+Use the `vagrant up` command to start your vagrant box and trigger a provisioning event if needed.
+
+```bash
+$ cd my-vagrant-project
+$ vagrant up
+
+Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Importing base box 'ubuntu/trusty64'...
+==> default: Matching MAC address for NAT networking...
+==> default: Checking if box 'ubuntu/trusty64' is up to date...
+==> default: A newer version of the box 'ubuntu/trusty64' is available! You currently
+==> default: have version '20150609.0.10'. The latest is version '20150909.1.0'. Run
+==> default: `vagrant box update` to update.
+==> default: Setting the name of the VM: my-vagrant-project_default_1442074967546_86056
+==> default: Clearing any previously set forwarded ports...
+==> default: Clearing any previously set network interfaces...
+==> default: Preparing network interfaces based on configuration...
+    default: Adapter 1: nat
+==> default: Forwarding ports...
+    default: 22 => 2222 (adapter 1)
+==> default: Booting VM...
+==> default: Waiting for machine to boot. This may take a few minutes...
+    default: SSH address: 127.0.0.1:2222
+    default: SSH username: vagrant
+    default: SSH auth method: private key
+    default: Warning: Connection timeout. Retrying...
+    default:
+    default: Vagrant insecure key detected. Vagrant will automatically replace
+    default: this with a newly generated keypair for better security.
+    default:
+    default: Inserting generated public key within guest...
+    default: Removing insecure key from the guest if its present...
+    default: Key inserted! Disconnecting and reconnecting using new SSH key...
+==> default: Machine booted and ready!
+==> default: Checking for guest additions in VM...
+==> default: Mounting shared folders...
+    default: /vagrant => /Users/jalvarez/Projects/Test/my-vagrant-project
+```
+
+Several things will happend when you run `vagrant up`
