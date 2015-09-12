@@ -3,4 +3,5 @@
 * [Introduction](README.md)
 * [1. Setup](chapter1.md)
    * [Vagrant](vagrant.md)
+   * RVM - Ruby
 
