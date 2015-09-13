@@ -11,4 +11,5 @@
    * [Gitflow](gitflow.md)
    * [Putting it all together](putting_it_all_together.md)
 * Organizing Puppet code
+* Distributing Puppet modules
 
