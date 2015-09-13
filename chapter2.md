@@ -1,15 +1,15 @@
 # Setting up your development environment
 
-Rule number 1 of the Puppet Club:
+Rule number one of the Puppet Club:
 
 **We don't write or test code in our production environment.**
 
 
 ---
 
-There is no simple, one click solution for testing Puppet code. 
+There is no simple, one click solution for testing Puppet code. Testing Puppet code requires a collection of tools and methodologies to get the job done.
 
-Here is a list of tools or methodologies you might need in your Puppet testing journey:
+Here is a list of what you might need in your Puppet testing journey:
 
 * [Vagrant](https://www.vagrantup.com/) [1]
 * [RVM](https://rvm.io/) [2]
@@ -21,9 +21,11 @@ Here is a list of tools or methodologies you might need in your Puppet testing j
 * [Rspec](http://rspec.info/) [8]
 * [Rspec Puppet](http://rspec-puppet.com/) [9]
 * [Beaker](https://github.com/puppetlabs/beaker) [10]
-* Rspec Beaker
+* [Rspec Beaker](https://github.com/puppetlabs/beaker-rspec) [11]
+* [Serverspec](http://serverspec.org/) [12]
 
-In the next section I will go over the first six. They will help you setup a testing system that is flexible an production like. The remaining four will be explored in depth since they are the tools that actually test your Puppet code.
+In the next section I will present the first six. I will give you a brief rundown of what they can do and how they tie to our work flow. 
+I will talk about the remaining in following chapters since they are the tools that actually test your Puppet code.
 
 
 
@@ -50,4 +52,6 @@ Making TDD Productive and Fun.: http://rspec.info/
 
 [9] Rspec-Puppet - RSpec tests for your Puppet manifests: http://rspec-puppet.com/
 
-[1] Puppetlabs Beaker - : https://github.com/puppetlabs/beaker
+[10] Puppetlabs Beaker - Puppet Acceptance Testing Harness: https://github.com/puppetlabs/beaker
+
+[11] Puppetlabs Rspec Beaker - Bridge between puppet test harness (beaker) and rspec: https://github.com/puppetlabs/beaker-rspec
