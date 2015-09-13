@@ -16,4 +16,5 @@
    * Rspec
    * Rspec Puppet
    * Beaker
+   * Rspec Beaker
 
