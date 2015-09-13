@@ -79,7 +79,7 @@ gem "puppet", "4.2.1"
 
 Now that you have a valid `Gemfile` it is time to install your gems.
 
-Run the `bundle install` command in the same directory that contains your `Gemfile`.
+Run the `bundle install` command in the same directory that contains your `Gemfile`. Bundle will query the source you specified for the version of the gem you declared and will also find it's dependencies.
 
 ```bash
 vagrant:$ cd ~/my-project
@@ -87,8 +87,66 @@ vagrant:$ ls
 Gemfile
 
 vagrant:$ bundle install
+Fetching gem metadata from https://rubygems.org/...........
+Fetching version metadata from https://rubygems.org/..
+Resolving dependencies...
+Installing CFPropertyList 2.2.8
+Installing facter 2.4.4
+Installing json_pure 1.8.2
+Installing hiera 3.0.1
+Installing puppet 4.2.1
+Using bundler 1.8.4
+Bundle complete! 1 Gemfile dependency, 6 gems now installed.
+Use `bundle show [gemname]` to see where a bundled gem is installed.
 ```
 
+You can see the gems installed by in your bundle by running `bundle show` in the directory that holds your `Gemfile`.
+
+Notice that Bundler has created a new file named `Gemfile.lock`. This file contains the real manifest of the dependency tree. In it you will see a list of the gems you declared in the Gemfile, as well as their dependencies.
+
+```bash
+vagrant:$ cd ~/my-project
+vagrant:$ cat Gemfile.lock
+GEM
+  remote: https://rubygems.org/
+  specs:
+    CFPropertyList (2.2.8)
+    facter (2.4.4)
+      CFPropertyList (~> 2.2.6)
+    hiera (3.0.1)
+      json_pure
+    json_pure (1.8.2)
+    puppet (4.2.1)
+      facter (> 2.0, < 4)
+      hiera (>= 2.0, < 4)
+      json_pure
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  puppet (= 4.2.1)
+```
+
+## Updating dependencies
+
+### Word of caution
+
+Always declare the specific version of *each* gem your project requires. Leaving version numbers open can lead to many unfortunate incidents that tend to happen when you are short of time and sleep.
+
+If you will like to relax your version numbers I recommend using the `spermy operator ~>`. Wich will allow you to update to a higher patch version of your gem, but will not update to a minor one. This allows you to get the latest bug patches without accepting any new features that might break your code.
+
+An updated version of your `Gemfile` might look like:
+
+```ruby
+# /home/vagrant/my-project/Gemfile
+
+source "https://rubygems.org"
+
+gem "puppet", "~>4.2.1"
+```
+
+Now you could run the `bundle update` command to get a new version of Puppet. Bundler will download and install any new version starting with `4.2.1` and ending with `4.2.99`. But you will never receive anything higher like `4.3` or `5`.
 
 ---
 
