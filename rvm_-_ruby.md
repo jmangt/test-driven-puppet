@@ -15,8 +15,9 @@ The RVM reads *"RVM is a command-line tool which allows you to easily install, m
 This means that we can multiple versions of Ruby installed in our system and switch between them as we please. RVM even gives us the option to configure a specific project to run under a specific version of Ruby while the rest run in another.
 
 ## Installing RVM
-
+*
 The following commands will install RVM to be used within the context of your non root user. RVM will not be available as a system command. If you need RVM to be used system wide please refer to the [Multi-User installs section](https://rvm.io/support/troubleshooting#sudo) of the RVM site [5].
+*
 
 Ssh into your Vagrant Box instance with the `vagrant ssh` command. 
 
@@ -150,6 +151,12 @@ ruby 2.2.1p85 (2015-02-26 revision 49769) [x86_64-linux]
 In case no binaries are available for the version of Ruby you chose, RVM will install it by compiling it from source. This might take a while, so be patient.
 
 ## Managing your Ruby versions
+
+In my system I have installed three versions of Ruby to able to show you how to switch between them.
+
+### Listing your installed versions of Ruby
+
+Use the `rvm list` command to list all installed versions of Ruby in your system.
 
 
 
