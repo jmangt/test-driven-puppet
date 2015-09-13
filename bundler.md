@@ -34,9 +34,35 @@ vagrant:$ echo '2.2.1' > ~/my-project/.ruby-version
 vagrant:$ echo 'puppet-4.2.1' > ~/my-project/.ruby-gemset
 vagrant:$ cd ~/my-project
 vagrant:$ bundle init
-Writing new Gemfile to /home/vagrant/my-puppet/Gemfile
+Writing new Gemfile to /home/vagrant/my-project/Gemfile
 ```
 
+This is how your default Gemfile looks like:
+
+```ruby
+# /home/vagrant/my-project/Gemfile
+
+# A sample Gemfile
+source "https://rubygems.org"
+
+# gem "rails"
+```
+
+There are two main sections in a Gemfile. 
+
+First is the `source`. This is a URL where the gems that your project needs are hosted. By default gems are hosted in the public [rubygems.org](https://rubygems.org/) [3] repository. But you can change this to a private repository if you need to.
+
+The second section is the gems declaration section. In here you will write the name of your gems, the version required by them. Bundler will take care of determining the dependency tree for all the declared gems and their dependencies.
+
+Update your Gemfile to include puppet 3.7.4.
+
+```ruby
+# /home/vagrant/my-project/Gemfile
+
+source "https://rubygems.org"
+
+gem "puppet", "3.7.4"
+```
 
 
 Manage dependencies
@@ -52,3 +78,5 @@ Setup a project
 [1] Bundler - The best way to manage a Ruby application's gems: http://bundler.io/
 
 [2] Gemfile: http://bundler.io/gemfile.html
+
+[3] rubygems.org - Find, install, and publish RubyGems: https://rubygems.org/
