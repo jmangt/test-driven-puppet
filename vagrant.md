@@ -1,4 +1,4 @@
-## Vagrant
+# Vagrant
 
 [Vagrant]( https://www.vagrantup.com/ ) is a tool that helps us provision and manage VMs. It works with common virtualization tools like Virtualbox, Vmware and Amazon EC2. 
 
