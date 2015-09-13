@@ -236,4 +236,6 @@ In case you wanted other packages, users or directories added to your VM all you
 
 An that is all you need to know to start using Vagrant.
 
+In later chapters we will use this work flow to configure a production like Puppet environment. Stay tuned.
+
 
