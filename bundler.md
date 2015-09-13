@@ -29,10 +29,12 @@ A `[Gemfile](http://bundler.io/gemfile.html)` [2] is Bundler's way of declaring 
 Select your RVM manged project and add a default `Gemfile` by running the `bundle init` command. 
 
 ```bash
-vagrant:$ cd ~/my-puppet-project
-vagrant:$ 
+vagrant:$ mkdir ~/my-project
+vagrant:$ echo '2.2.1' > ~/my-project/.ruby-version
+vagrant:$ echo 'puppet-4.2.1' > ~/my-project/.ruby-gemset
+vagrant:$ cd ~/my-project
 vagrant:$ bundle init
-Writing new Gemfile to /home/vagrant/my-puppet-project/Gemfile
+Writing new Gemfile to /home/vagrant/my-puppet/Gemfile
 ```
 
 
