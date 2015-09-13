@@ -57,7 +57,9 @@ Vagrant.configure(2) do |config|
 end
 ```
 
-Lets re initialize our `Vagrantfile` with an Ubuntu 14.04 box.
+You can find more vagrant boxes with the [Hashicorp Atlas](https://atlas.hashicorp.com/boxes/search) tool [1]. This site hosts several officially supported boxes as many custom community maintained boxes. Choose wisely.
+
+Lets re initialize our `Vagrantfile` with an Ubuntu 14.04 x64 box. 
 
 ```
 $ rm Vagrantfile
@@ -239,3 +241,7 @@ An that is all you need to know to start using Vagrant.
 In later chapters we will use this work flow to configure a production like Puppet environment. Stay tuned.
 
 
+
+---
+
+[1] Hashicorp Atlas: https://atlas.hashicorp.com/boxes/search
