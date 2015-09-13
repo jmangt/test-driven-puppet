@@ -16,15 +16,21 @@ This means that we can multiple versions of Ruby installed in our system and swi
 
 ## Installing RVM
 
-Ssh into your Vagrant Box instance with the `vagrant ssh` command. Once inside your VM run the following commands.
+Ssh into your Vagrant Box instance with the `vagrant ssh` command. 
 
 ```bash
 $ cd ~/my-vagrant-project
 $ vagrant up # < in case your vm is not running
 $ vagrant ssh
-...
-vagrant@vagrant-ubuntu-trusty-64:~$
 ```
+
+Once inside your VM run the following commands.
+
+```bash
+$ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+$ \curl -sSL https://get.rvm.io | bash -s stable
+```
+
 
 
 
