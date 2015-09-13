@@ -19,8 +19,8 @@ Here is a list of tools or methodologies you might need in your Puppet testing j
 * [Packer](https://www.packer.io/) [6]
 * [Puppet Lint](http://puppet-lint.com/) [7]
 * [Rspec](http://rspec.info/) [8]
-* [Rspec Puppet](http://rspec-puppet.com/)
-* Beaker
+* [Rspec Puppet](http://rspec-puppet.com/) [9]
+* [Beaker](https://github.com/puppetlabs/beaker) [10]
 * Rspec Beaker
 
 In the next section I will go over the first six. They will help you setup a testing system that is flexible an production like. The remaining four will be explored in depth since they are the tools that actually test your Puppet code.
@@ -49,3 +49,5 @@ Development for Ruby.
 Making TDD Productive and Fun.: http://rspec.info/
 
 [9] Rspec-Puppet - RSpec tests for your Puppet manifests: http://rspec-puppet.com/
+
+[1] Puppetlabs Beaker - : https://github.com/puppetlabs/beaker
