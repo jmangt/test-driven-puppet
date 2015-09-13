@@ -5,4 +5,5 @@
 * [Setup](chapter2.md)
    * [Vagrant](vagrant.md)
    * [RVM - Ruby](rvm_-_ruby.md)
+   * Puppet
 
