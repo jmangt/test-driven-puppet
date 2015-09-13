@@ -9,4 +9,5 @@
    * [Bundler](bundler.md)
    * [Git](git.md)
    * [Gitflow](gitflow.md)
+   * Putting it all together
 
