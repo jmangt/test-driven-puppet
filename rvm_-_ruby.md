@@ -1,4 +1,4 @@
-## Manage Ruby with RVM
+# Manage Ruby with RVM
 
 Using the recommended installation procedure from the Puppetlabs [1] site will give you the minimum requirements to run Puppet in your system. 
 
