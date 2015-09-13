@@ -16,7 +16,7 @@ This means that we can multiple versions of Ruby installed in our system and swi
 
 ## Installing RVM
 *
-The following commands will install RVM to be used within the context of your non root user. RVM will not be available as a system command. If you need RVM to be used system wide please refer to the [Multi-User installs section](https://rvm.io/support/troubleshooting#sudo) of the RVM site [5].
+The following commands will install RVM to be used within the context of your **non root user**. RVM **will not be available as a system command**. If you need RVM to be used system wide please refer to the [Multi-User installs section](https://rvm.io/support/troubleshooting#sudo) of the RVM site [5].
 *
 
 Ssh into your Vagrant Box instance with the `vagrant ssh` command. 
@@ -158,6 +158,50 @@ In my system I have installed three versions of Ruby to able to show you how to 
 
 Use the `rvm list` command to list all installed versions of Ruby in your system.
 
+```bash
+vagrant:$ rvm list
+
+rvm rubies
+
+   ruby-1.8.7-head [ x86_64 ]
+   ruby-1.8.7-p374 [ x86_64 ]
+   ruby-2.1.7 [ x86_64 ]
+=* ruby-2.2.1 [ x86_64 ]
+
+# => - current
+# =* - current && default
+#  * - default
+```
+
+If you pay attention to the command's output, you will see a legend that shows what version is in use and what version is your user's default.
+
+Change the current version by using the command `rvm use VERSION`.
+
+```bash
+vagrant$: rvm use 1.8.7
+Using /home/vagrant/.rvm/gems/ruby-1.8.7-head
+
+vagrant$: rvm list
+
+rvm rubies
+
+=> ruby-1.8.7-head [ x86_64 ]
+   ruby-1.8.7-p374 [ x86_64 ]
+   ruby-2.1.7 [ x86_64 ]
+ * ruby-2.2.1 [ x86_64 ]
+
+# => - current
+# =* - current && default
+#  * - default
+```
+
+The `rvm list` command now shows us that we are using 1.8.7 but that our user's default version is still 2.1.1. That means that if we exit this session or start a new one, 2.1.1 will be selected for use.
+
+If we want to make 1.8.7 the default version for our use we can pass the `--default` flag to the use command.
+
+```bash
+vagrant:$ rvm use 1.8.7 --default
+```
 
 
 ---
