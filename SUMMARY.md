@@ -13,9 +13,9 @@
 * [Organizing Puppet modules](chapter3.md)
 * [Distributing Puppet modules](chapter4.md)
 * [Testing Puppet modules](chapter5.md)
+   * Test Driven Development
    * Rspec
    * Rspec Puppet
    * Beaker
    * Rspec Beaker
-   * Test Driven Development
 
