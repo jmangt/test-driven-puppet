@@ -134,15 +134,22 @@ Once you have made your choice, you can install a specific version of Ruby using
 
 You can specify a version passing the version number as an argument.
 
-```
-vagrant:$ rvm install 2.1.7` 
+```bash
+vagrant:$ rvm install 2.1.7
 ```
 
-Or allow RVM to choose the latest stable version  of Ruby for you
+Or allow RVM to choose the latest stable version  of Ruby for you. At the time of this writing the current stable version of Ruby is 2.2.1.
 
-```
+```bash
 vagrant:$ ruby install ruby
+...
+vagrant:$ ruby -v
+ruby 2.2.1p85 (2015-02-26 revision 49769) [x86_64-linux]
 ```
+
+In case no binaries are available for the version of Ruby you chose, RVM will install it by compiling it from source. This might take a while, so be patient.
+
+## Managing your Ruby versions
 
 
 
