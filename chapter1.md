@@ -18,4 +18,8 @@ It is uncommon that your working station is an exact match to your production se
 
 Let's take a look at a tool called Vagrant, that will make it easy to manage our VM setup.
 
+*Please feel free to skip the following sections if you are familiar with Vagrant and RVM*
+
+
+
 
