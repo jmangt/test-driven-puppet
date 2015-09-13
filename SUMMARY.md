@@ -11,5 +11,5 @@
    * [Gitflow](gitflow.md)
    * [Putting it all together](putting_it_all_together.md)
 * [Organizing Puppet modules](chapter3.md)
-* Distributing Puppet modules
+* [Distributing Puppet modules](chapter4.md)
 
