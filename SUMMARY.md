@@ -8,4 +8,5 @@
    * [Puppet](puppet.md)
    * [Bundler](bundler.md)
    * Git
+   * Gitflow
 
