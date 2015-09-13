@@ -9,13 +9,13 @@ Vagrant accomplished this by:
 * Allow your to describe how to provision your VM.
 * Mount and sync your local source into the VM.
 
-### Installing Vagrant
+## Installing Vagrant
 
 Vagrant needs a virtualization provider to be able run. The default provider is [Virtualbox](https://www.virtualbox.org/). If your system doesn't have it installed, go to the [Downloads section](https://www.virtualbox.org/wiki/Downloads) of the site and get the corresponding installer for your system. 
 
 After Virtualbox is intalled go the [Downloads section](https://www.vagrantup.com/downloads.html) of the Vagrant Site to download and run the appropriate installer for your system.
 
-### Starting a Vagrant project
+## Starting a Vagrant project
 
 Create a directory where to host your vagrant project or use a directory that contains the source of a current project.
 
@@ -76,7 +76,7 @@ end
 
 Now we are ready to provision our VM.
 
-### Provisioning
+## Provisioning
 
 The easiest way to provision a Vagrant box is to use the Shell provisioner. 
 
@@ -95,7 +95,7 @@ end
 
 The provisioner section will run the first time you start a new system. If it is successful, it will mark the system as provisioned and will not run it again unless your force a re provision.
 
-### Starting your box for the first time
+## Starting your box for the first time
 
 Use the `vagrant up` command to start your vagrant box and trigger a provisioning event if needed.
 
@@ -132,7 +132,7 @@ Bringing machine 'default' up with 'virtualbox' provider...
 
 After Vagrant has finished its run you will now have a fully functional Ubuntu server running apache2.
 
-### Check the status of your VM
+## Check the status of your VM
 
 User the `vagrant status` command to check the current status of your VM.
 
@@ -150,7 +150,7 @@ suspend the virtual machine. In either case, to restart it again,
 simply run `vagrant up`.
 ```
 
-### SSH into your box
+## SSH into your box
 
 Use the `vagrant ssh` to start a remote session into your box.
 
@@ -182,7 +182,7 @@ Welcome to Ubuntu 14.04.2 LTS (GNU/Linux 3.13.0-55-generic x86_64)
 vagrant@vagrant-ubuntu-trusty-64:~$
 ```
 
-### Networking 
+## Networking 
 
 If you try to reach the apache2 instance your will find yourself stuck. Vagrant does not provide a simple way to find the ip address of the VM. You can always ssh into the box and run a `ifconfig` command to find out.
 
