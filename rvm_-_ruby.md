@@ -4,7 +4,9 @@ Puppet is a ruby gem.
 
 If you want puppet to run you will need to have ruby installed.
 
-Using the recommended installation procedure from the Puppetlabs [1] site will give you
+Using the recommended installation procedure from the Puppetlabs [1] site will give you the minimum requirements to run Puppet in your system. 
+
+Unfortunately this means that your will probably end up with ruby version 1.8.7.
 
 
 
