@@ -7,6 +7,11 @@ Rule number 1 of the Puppet Club:
 
 ---
 
+There is no simple, one click solution for testing Puppet code. 
+
+
+
+
 To avoid any unexpected behavior, your development should resemble your production environment.
 
 That means:
