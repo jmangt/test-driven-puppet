@@ -16,6 +16,8 @@ This means that we can multiple versions of Ruby installed in our system and swi
 
 ## Installing RVM
 
+The following commands will install RVM to be used within the context of your non root user. RVM will not be available as a system command. If you need RVM to be used system wide please refer to the [Multi-User installs section](https://rvm.io/support/troubleshooting#sudo) of the RVM site [5].
+
 Ssh into your Vagrant Box instance with the `vagrant ssh` command. 
 
 ```bash
@@ -27,13 +29,120 @@ $ vagrant ssh
 Once inside your VM run the following commands.
 
 ```bash
-$ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
-$ \curl -sSL https://get.rvm.io | bash -s stable
+vagrant:$ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+vagrant:$ \curl -sSL https://get.rvm.io | bash -s stable
+...
+  * To start using RVM you need to run `source /home/vagrant/.rvm/scripts/rvm`
+    in all your open shell windows, in rare cases you need to reopen all shell windows.
+...
 ```
 
+As the output describes RVM needs to be loaded into your user's terminal session before it can be used. If you wan't go ahead and run the following command to load it into your session. Another choice is to exit your ssh session and start a new one with `vagrant ssh`.
 
+```bash
+vagrant:$ source /home/vagrant/.rvm/scripts/rvm
+```
 
+Make sure all is working as expected by running:
 
+```bash
+vagrant:$ rvm
+
+= rvm
+
+* https://rvm.io/
+* https://github.com/wayneeseguin/rvm/
+
+== DESCRIPTION:
+
+RVM is the Ruby enVironment Manager (rvm).
+....
+```
+
+If you run into any issues with this procedure please refer to the [Troubleshooting section](https://rvm.io/support/troubleshooting) [4] of the RVM site.
+
+## Available Ruby versions
+
+RVM gives you the choice to install multiple versions of Ruby in your system. 
+
+Take a look at the available versions by running `rvm list known`.
+
+```bash
+vagrant:$ vagrant@vagrant-ubuntu-trusty-64:~$ rvm list known
+# MRI Rubies
+[ruby-]1.8.6[-p420]
+[ruby-]1.8.7[-head] # security released on head
+[ruby-]1.9.1[-p431]
+[ruby-]1.9.2[-p330]
+[ruby-]1.9.3[-p551]
+[ruby-]2.0.0[-p643]
+[ruby-]2.1.4
+[ruby-]2.1[.5]
+[ruby-]2.2[.1]
+[ruby-]2.2-head
+ruby-head
+
+# for forks use: rvm install ruby-head-<name> --url https://github.com/github/ruby.git --branch 2.1
+
+# JRuby
+jruby-1.6.8
+jruby[-1.7.19]
+jruby-head
+jruby-9.0.0.0.pre1
+
+# Rubinius
+rbx-1.4.3
+rbx-2.4.1
+rbx[-2.5.2]
+rbx-head
+
+# Opal
+opal
+
+# Minimalistic ruby implementation - ISO 30170:2012
+mruby[-head]
+
+# Ruby Enterprise Edition
+ree-1.8.6
+ree[-1.8.7][-2012.02]
+
+# GoRuby
+goruby
+
+# Topaz
+topaz
+
+# MagLev
+maglev[-head]
+maglev-1.0.0
+
+# Mac OS X Snow Leopard Or Newer
+macruby-0.10
+macruby-0.11
+macruby[-0.12]
+macruby-nightly
+macruby-head
+
+# IronRuby
+ironruby[-1.1.3]
+ironruby-head
+```
+
+## Installing Ruby
+
+Once you have made your choice, you can install a specific version of Ruby using the command `rvm install`. 
+
+You can specify a version passing the version number as an argument.
+
+```
+vagrant:$ rvm install 2.1.7` 
+```
+
+Or allow RVM to choose the latest stable version  of Ruby for you
+
+```
+vagrant:$ ruby install ruby
+```
 
 
 
@@ -45,3 +154,7 @@ $ \curl -sSL https://get.rvm.io | bash -s stable
 [2] RubyGems: https://rubygems.org/
 
 [3] RVM - Ruby Version Manager: https://rvm.io/
+
+[4] Troubleshooting RVM: https://rvm.io/support/troubleshooting
+
+[5] Multi-User Installs - Using the sudo command: https://rvm.io/support/troubleshooting#sudo
