@@ -65,23 +65,29 @@ gem 'thin',  '~>1.1'
 
 *Most of the version specifiers, like >= 1.0, are self-explanatory. The specifier ~> has a special meaning, best shown by example. ~> 2.0.3 is identical to >= 2.0.3 and < 2.1. ~> 2.1 is identical to >= 2.1 and < 3.0. ~> 2.2.beta will match prerelease versions like 2.2.beta.12. * [4]
 
-Update your Gemfile to include puppet 3.7.4 as it's only dependency.
+Update and save your Gemfile to include puppet 4.2.1 as it's only dependency.
 
 ```ruby
 # /home/vagrant/my-project/Gemfile
 
 source "https://rubygems.org"
 
-gem "puppet", "3.7.4"
+gem "puppet", "4.2.1"
 ```
 
+## Install dependencies
 
-Manage dependencies
+Now that you have a valid `Gemfile` it is time to install your gems.
 
-Sharing a project with your team
+Run the `bundle install` command in the same directory that contains your `Gemfile`.
 
-Setup a project
+```bash
+vagrant:$ cd ~/my-project
+vagrant:$ ls
+Gemfile
 
+vagrant:$ bundle install
+```
 
 
 ---
