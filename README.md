@@ -8,7 +8,7 @@ To all my peeps at Xoom Coorporation who put up with my all my rants.
 
 ## Preface
 
-### Why should your Test your Puppet modules?
+### Why should you Test your Puppet modules?
 
 **"Insanity is doing the same thing over and over again and expecting different results" -- Albert Einstein**.
 
