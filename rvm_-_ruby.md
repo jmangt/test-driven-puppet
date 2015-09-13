@@ -14,6 +14,19 @@ The RVM reads *"RVM is a command-line tool which allows you to easily install, m
 
 This means that we can multiple versions of Ruby installed in our system and switch between them as we please. RVM even gives us the option to configure a specific project to run under a specific version of Ruby while the rest run in another.
 
+## Installing RVM
+
+Ssh into your Vagrant Box instance with the `vagrant ssh` command. Once inside your VM run the following commands.
+
+```bash
+$ cd ~/my-vagrant-project
+$ vagrant up # < in case your vm is not running
+$ vagrant ssh
+...
+vagrant@vagrant-ubuntu-trusty-64:~$
+```
+
+
 
 
 
