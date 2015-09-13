@@ -12,6 +12,8 @@ To all my peeps at Xoom Coorporation who put up with my all my rants.
 
 **"Insanity is doing the same thing over and over again and expecting different results" -- Albert Einstein**.
 
+**"Puppet code is software too. It deserves love an respect." -- JManGt**
+
 If you've doing Puppet code for a while you probably are familiar with the phrase "Why did it do that?". Or maybe "The run failed but If when I ran it again it fixed itself". Or "Don't give it to the new guy He might brake it." 
 
 You know the drill. 
