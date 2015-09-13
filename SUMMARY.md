@@ -13,4 +13,5 @@
 * [Organizing Puppet modules](chapter3.md)
 * [Distributing Puppet modules](chapter4.md)
 * [Testing Puppet modules](chapter5.md)
+   * Rspec
 
