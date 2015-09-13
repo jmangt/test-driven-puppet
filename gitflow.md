@@ -1,6 +1,6 @@
 # Gitflow
 
-Destribe methodology
+Describe methodology
 
 Give credit
 
