@@ -54,7 +54,18 @@ First is the `source`. This is a URL where the gems that your project needs are 
 
 The second section is the gems declaration section. In here you will write the name of your gems, the version required by them. Bundler will take care of determining the dependency tree for all the declared gems and their dependencies.
 
-Update your Gemfile to include puppet 3.7.4.
+Here is an example taken from the Bundler site on how to declare gem versions.
+
+```ruby
+gem 'nokogiri'
+gem 'rails', '3.0.0.beta3'
+gem 'rack',  '>=1.0'
+gem 'thin',  '~>1.1'
+```
+
+*Most of the version specifiers, like >= 1.0, are self-explanatory. The specifier ~> has a special meaning, best shown by example. ~> 2.0.3 is identical to >= 2.0.3 and < 2.1. ~> 2.1 is identical to >= 2.1 and < 3.0. ~> 2.2.beta will match prerelease versions like 2.2.beta.12. * [4]
+
+Update your Gemfile to include puppet 3.7.4 as it's only dependency.
 
 ```ruby
 # /home/vagrant/my-project/Gemfile
@@ -79,4 +90,4 @@ Setup a project
 
 [2] Gemfile: http://bundler.io/gemfile.html
 
-[3] rubygems.org - Find, install, and publish RubyGems: https://rubygems.org/
+[3][4] rubygems.org - Find, install, and publish RubyGems: https://rubygems.org/
