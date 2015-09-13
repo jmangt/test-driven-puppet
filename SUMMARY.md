@@ -15,4 +15,5 @@
 * [Testing Puppet modules](chapter5.md)
    * Rspec
    * Rspec Puppet
+   * Beaker
 
