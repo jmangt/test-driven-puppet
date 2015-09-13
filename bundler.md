@@ -130,9 +130,11 @@ DEPENDENCIES
 
 ## Updating dependencies
 
+Use the `bundle update` command to install the latest version available of your declared gems.
+
 ### Word of caution
 
-Always declare the specific version of *each* gem your project requires. Leaving version numbers open can lead to many unfortunate incidents that tend to happen when you are short of time and sleep.
+*Always declare the specific version of *each* gem your project requires. Leaving version numbers open can lead to many unfortunate incidents that tend to happen when you are short of time and sleep.*
 
 If you will like to relax your version numbers I recommend using the `spermy operator ~>`. Wich will allow you to update to a higher patch version of your gem, but will not update to a minor one. This allows you to get the latest bug patches without accepting any new features that might break your code.
 
