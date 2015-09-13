@@ -6,5 +6,5 @@
    * [Vagrant](vagrant.md)
    * [RVM - Ruby](rvm_-_ruby.md)
    * [Puppet](puppet.md)
-   * Bundler
+   * [Bundler](bundler.md)
 
