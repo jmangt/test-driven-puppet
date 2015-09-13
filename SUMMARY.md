@@ -10,6 +10,6 @@
    * [Git](git.md)
    * [Gitflow](gitflow.md)
    * [Putting it all together](putting_it_all_together.md)
-* Organizing Puppet modules
+* [Organizing Puppet modules](chapter3.md)
 * Distributing Puppet modules
 
