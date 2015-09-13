@@ -12,5 +12,5 @@
    * [Putting it all together](putting_it_all_together.md)
 * [Organizing Puppet modules](chapter3.md)
 * [Distributing Puppet modules](chapter4.md)
-* Testing Puppet modules
+* [Testing Puppet modules](chapter5.md)
 
