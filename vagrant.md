@@ -105,35 +105,130 @@ $ vagrant up
 
 Bringing machine 'default' up with 'virtualbox' provider...
 ==> default: Importing base box 'ubuntu/trusty64'...
-==> default: Matching MAC address for NAT networking...
-==> default: Checking if box 'ubuntu/trusty64' is up to date...
-==> default: A newer version of the box 'ubuntu/trusty64' is available! You currently
-==> default: have version '20150609.0.10'. The latest is version '20150909.1.0'. Run
-==> default: `vagrant box update` to update.
-==> default: Setting the name of the VM: my-vagrant-project_default_1442074967546_86056
-==> default: Clearing any previously set forwarded ports...
-==> default: Clearing any previously set network interfaces...
-==> default: Preparing network interfaces based on configuration...
-    default: Adapter 1: nat
+...
 ==> default: Forwarding ports...
     default: 22 => 2222 (adapter 1)
 ==> default: Booting VM...
 ==> default: Waiting for machine to boot. This may take a few minutes...
     default: SSH address: 127.0.0.1:2222
-    default: SSH username: vagrant
-    default: SSH auth method: private key
-    default: Warning: Connection timeout. Retrying...
-    default:
-    default: Vagrant insecure key detected. Vagrant will automatically replace
-    default: this with a newly generated keypair for better security.
-    default:
-    default: Inserting generated public key within guest...
-    default: Removing insecure key from the guest if its present...
-    default: Key inserted! Disconnecting and reconnecting using new SSH key...
+...
 ==> default: Machine booted and ready!
 ==> default: Checking for guest additions in VM...
 ==> default: Mounting shared folders...
-    default: /vagrant => /Users/jalvarez/Projects/Test/my-vagrant-project
+    default: /vagrant => /Users/jmangt/my-vagrant-project
+==> default: Running provisioner: shell...
+    default: Running: inline script
+==> default: stdin: is not a tty
+==> default: Ign http://security.ubuntu.com trusty-security InRelease
+==> default: Ign http://archive.ubuntu.com trusty InRelease
+...
+==> default: The following extra packages will be installed:
+==> default:   apache2-bin apache2-data libapr1 libaprutil1 libaprutil1-dbd-sqlite3
+==> default:   libaprutil1-ldap ssl-cert
+...
+==> default:  * Starting web server apache2
+...
 ```
 
-Several things will happend when you run `vagrant up`
+After Vagrant has finished its run you will now have a fully functional Ubuntu server running apache2.
+
+### Check the status of your VM
+
+User the `vagrant status` command to check the current status of your VM.
+
+```bash
+$ cd ~/my-vagrant-project
+$ vagrant status
+
+Current machine states:
+
+default                   running (virtualbox)
+
+The VM is running. To stop this VM, you can run `vagrant halt` to
+shut it down forcefully, or you can run `vagrant suspend` to simply
+suspend the virtual machine. In either case, to restart it again,
+simply run `vagrant up`.
+```
+
+### SSH into your box
+
+Use the `vagrant ssh` to start a remote session into your box.
+
+```bash
+$ cd ~/my-vagrant-project
+$ vagrant ssh
+
+Welcome to Ubuntu 14.04.2 LTS (GNU/Linux 3.13.0-55-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Sat Sep 12 23:51:42 UTC 2015
+
+  System load:  0.38              Processes:           80
+  Usage of /:   3.2% of 39.34GB   Users logged in:     0
+  Memory usage: 25%               IP address for eth0: 10.0.2.15
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+0 packages can be updated.
+0 updates are security updates.
+
+
+vagrant@vagrant-ubuntu-trusty-64:~$
+```
+
+### Networking 
+
+If you try to reach the apache2 instance your will find yourself stuck. Vagrant does not provide a simple way to find the ip address of the VM. You can always ssh into the box and run a `ifconfig` command to find out.
+
+Use the `config.vm.network` property in your `Vagrantfile` to setup a private ip address for your VM.
+
+```ruby
+# ~/my-vagrant-project/Vagranfile
+...
+  # Create a private network, which allows host-only access to the machine
+  # using a specific IP.
+  config.vm.network "private_network", ip: "192.168.33.10"
+...
+```
+
+The second change to your `Vagrantfile` is to forward a port from your host to the corresponding `port 80` in your VM.
+
+```ruby
+# ~/my-vagrant-project/Vagranfile
+...
+# Create a forwarded port mapping which allows access to a specific port
+  # within the machine from a port on the host machine. In the example below,
+  # accessing "localhost:8080" will access port 80 on the guest machine.
+  config.vm.network "forwarded_port", guest: 80, host: 8080
+...
+```
+
+Now, we need to reboot our VM so the changes can take effect.
+
+Use the `vagrant reload` command to reboot your VM.
+
+```bash
+cd ~/my-vagrant-project
+vagrant reload
+
+==> default: Attempting graceful shutdown of VM...
+...
+==> default: Forwarding ports...
+    default: 80 => 8080 (adapter 1)
+...
+==> default: Machine already provisioned. Run `vagrant provision` or use the `--provision`
+==> default: to force provisioning. Provisioners marked to run always will still run.
+```
+
+All that we have left to do is try our shiny new apache instance.
+
+```bash
+$ curl 192.168.33.10
+```
+
