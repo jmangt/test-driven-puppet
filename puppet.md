@@ -200,6 +200,21 @@ vagrant:$ gem list --local | grep puppet
 puppet (4.2.1)
 ```
 
+There you go. Now you can start playing around with different configurations, both of Puppet and Ruby.
+
+### A word of caution
+
+RVM is a awesome development tool. But the truth is that it does not play well with production systems. Must other tools expect Ruby to be in a specific system wide path. More than that. Puppet will probably run under a user with no session, like root. So there is little chance that the magic PATH switching that RVM performs will play well in that case.
+
+Don't take me wrong. You can make it work. But you will pay the price for it.
+
+My suggestion is, if you need two versions of Ruby in your system you are probably doing something wrong.
+
+If your system does not provide an updated version of Ruby please consider building from source. You might feel like it is old school but trust me, it will save you a lot of problems in the future not having to wonder what is running where.
+
+If you are running Ruby applications that might conflict with system's Ruby version, I suggest that you evaluate a container technology like Docker to deploy your application.
+
+
 ---
 
 [1] Gemsets: https://rvm.io/gemsets/basics
