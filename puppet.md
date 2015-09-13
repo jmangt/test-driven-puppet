@@ -181,7 +181,7 @@ vagrant:$ echo '2.2.1' > ~/puppet-4.2.1/.ruby-version
 vagrant:$ echo 'puppet-4.2.1' > ~/puppet-4.2.1/.ruby-gemset
 ```
 
-Change now to that directory. RVM will check if both the version of Ruby and the gemset exists. If they do not it will create them for your or prompt you for action. Additionally RVM will switch your session to use that version of Ruby and that gemset without your having to type anything.
+Change now to that directory. RVM will check if both the version of Ruby and the gemset exists. If they do not it will create them for your or prompt you for action. Additionally RVM will switch your session to use the specified Ruby version and gemset.
 
 ```bash
 vagrant:$ cd ~/puppet-4.2.1
