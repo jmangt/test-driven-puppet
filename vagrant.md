@@ -232,3 +232,8 @@ All that we have left to do is try our shiny new apache instance.
 $ curl 192.168.33.10
 ```
 
+In case you wanted other packages, users or directories added to your VM all you need to do is add the corresponding commands to the `provision` section and run `vagrant reload --provision` for the changes to be applied.
+
+An that is all you need to know to start using Vagrant.
+
+
