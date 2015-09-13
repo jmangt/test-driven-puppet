@@ -7,4 +7,5 @@
    * [RVM - Ruby](rvm_-_ruby.md)
    * [Puppet](puppet.md)
    * [Bundler](bundler.md)
+   * Git
 
