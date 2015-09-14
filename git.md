@@ -285,7 +285,23 @@ vagrant:$ git log --decorate --oneline --graph
 * ff3497b This is the initial commit
 ```
 
-The output not reflect the branch merge. 
+The output not reflects the branch merge. 
+
+And now, if your don't need it any more, you can delete your development branch.
+
+### Deleting a branch
+
+Delete a local branch by using the `git branch -d BRANCH` command.
+
+```bash
+vagrant:$ cd ~/git-project
+vagrant:$ git branch
+* master
+develop
+vagrant:$ git branch -d develop
+vagrant:$ git branch
+* master
+```
 
 ---
 
