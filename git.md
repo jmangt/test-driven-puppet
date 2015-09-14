@@ -439,6 +439,28 @@ vagrant:$ git add Feature3.txt
 vagrant:$ git commit -am "Add Feature 3"
 ```
 
+Pull and merge the changes.
+
+```bash
+vagrant:$ cd ~/clone-project
+vagrant:$ git pull origin master
+remote: Counting objects: 4, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 0 (delta 0)
+Unpacking objects: 100% (3/3), done.
+From /home/vagrant/git-project
+ * branch            master     -> FETCH_HEAD
+   a8d1389..ac6eb55  master     -> origin/master
+Updating a8d1389..ac6eb55
+Fast-forward
+ Feature3.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Feature3.txt
+```
+
+## Centralized Git repositories
+
+Having a centralized Git repository is useful when working with a team. The commands and work flow are the same whether your remote is a local directory or an URL in some internet server.
 
 ---
 
