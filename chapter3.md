@@ -159,6 +159,43 @@ If you are not sure where to draw a line in you module's design, read a bit on t
 
 The better your apply the SRP, the easier it will be to re use your Puppet modules, and the easier it will be to test them.
 
+Here a some guideline on how to interact with modules:
+
+* Just like with classes Modules should be considered atomic. They should be able to take care of themselves without depending on the system to provide it's resources.
+* If the module depends on a resource to be present, it should make sure it is there.
+
+```puppet
+$ cd ~/helloworld
+.
+|--manifests
+|  |-- init.pp
+|  |-- params.pp
+```
+
+```puppet
+# manifests/init.pp
+class helloworld(
+  $salutation = $::helloworld::params::salutation,
+  $who        = $::helloworld::params::who,
+  $owner      = $::helloworld::params::owner,
+) inherits helloworld::params{
+
+  # The "owner" user is not defined in this
+  # module. 
+
+  file{'/tmp/hello-world.txt':
+    content => inline_template("<%= @salutation %>, <%= @who %>"),
+    owner   => $owner,
+  }
+  
+}
+```
+
+* If this resource falls outside of the scope of the module, a dependency is introduced and a new module is to be included to take care of it.
+
+
+* The module should not use any of the dependency's internal resources. It's interactions should be via the dependency's API.
+
 
 
 
