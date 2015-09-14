@@ -212,7 +212,7 @@ The output reflects what files have been updated and what lines are different fr
 
 
 
-### Branches
+### Between Branches
 
 Use the `git diff REF` command to view differences between branches or commits.
 
@@ -255,6 +255,7 @@ vagrant:$ git add Gemfile
 vagrant:$ git commit -m "Changed Puppet version to 3.7.4"
 ```
 
+## Merging Changes
 
 ---
 
