@@ -262,10 +262,30 @@ Use the `git merge BRANCH` command to merge the changes from BRANCH into your cu
 Merge the changes in `develop` into `master`.
 
 ```bash
-cd ~/git-project
+vagrant:$ cd ~/git-project
+vagrant:$ git checkout master
 
+# merge your changes back to master
+vagrant:$ git merge develop
+Updating ff3497b..88468f4
+Fast-forward
+ Feature1.txt | 1 +
+ Gemfile      | 2 +-
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+ create mode 100644 Feature1.txt
+
+# list your directory Feature1.txt will be present
+vagrant:$ ls
+Feature1.txt  Gemfile  Gemfile.lock
+
+# list your commits in a pretty way ;)
+vagrant:$ git log --decorate --oneline --graph
+* 88468f4 (HEAD, master, develop) Changed Puppet version to 3.7.4
+* aa9ec9e Add Feature1
+* ff3497b This is the initial commit
 ```
 
+The output not reflect the branch merge. 
 
 ---
 
