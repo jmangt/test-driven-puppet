@@ -307,7 +307,7 @@ vagrant:$ git branch
 
 A `tag` in Git is a way for your to put a bookmark in your commit history. Think about it as a flag that your can reference for comparing or checking out code. Each tag can also contain a message that can help you remember why is it there.
 
-In our work flow we will use them to mark a new release in our Puppet module.
+Adding tags to our commit history will allow us to mark certain commits as a `release`. This means that others will be able to reference that `tag` and get an exact copy of our module in that point.
 
 Add a tag to the latest commit of your `master` branch.
 
@@ -329,7 +329,11 @@ vagrant:$ git log --decorate --oneline --graph
 * ff3497b This is the initial commit
 ```
 
-ddd
+### Cloning, Pulling and Pushing
+
+
+
+
 ---
 
 [1] Pro Git. A must for learning about the tool, this book has been released under a Creative Commons license. And it is available for download at http://git-scm.com/book/en/v2
