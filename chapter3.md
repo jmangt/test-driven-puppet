@@ -146,6 +146,25 @@ This means that you should treat your class like it is magical. It should be abl
 
 And so on and so forth.
 
+***Providing a good API for your class might be the most important part of making your code testable.***
+
+A solid API will allow you provide multiple test scenarios. Each scenario will be based on the permutations of your parameters.
+
+```puppet
+# manifests/init.pp
+class helloworld(
+  $salutation = $::helloworld::params::salutation,
+  $who        = $::helloworld::params::who,
+  $owner      = $::helloworld::params::owner,
+) {
+...
+}
+```
+
+For example, class helloworld has tree parameters `salutation`, `who` and `owner`. This means that you have at least two basic scenarios. The first is *"what happens when i call the class without passing any parameters?*". And the second *"what happens when i call the class passing all parameters?"*. From there, and depending what your class does with it's parameters you will find yourself with as many scenarios as parameter combinations you can produce.
+
+
+
 ## Modules
 
 *My definition* of **module** is: "*A collection of Puppet resources that administer one and only one piece of technology*".
