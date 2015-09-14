@@ -372,11 +372,11 @@ origin	/home/vagrant/git-project (fetch)
 origin	/home/vagrant/git-project (push)
 ```
 
-#### Fetch Changes
+#### Fetch and Merge Changes
 
-Pull changes from a remote source by using the `git fetch REMOTE BRANCH` command.
+Fetch changes from a remote source by using the `git fetch REMOTE BRANCH` command.
 
-We now can use this `origin` default pull for changes in the original source.
+We now can use this `origin` default fetch for changes in the original source. *Fetching changes does not affect your code in any way*.
 
 Add a new commit to the original `git-project` directory.
 
@@ -387,9 +387,57 @@ vagrant:$ git add Feature2.txt
 vagrant:$ git commit -am "Add Feature 2"
 ```
 
-Now you can 
+Now you can fetch the changes from your `clone-project` directory.
 
+```bash
+vagrant:$ cd ~/clone-project
+vagrant:$ git fetch origin
+remote: Counting objects: 4, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 0 (delta 0)
+Unpacking objects: 100% (3/3), done.
+From /home/vagrant/git-project
+   88468f4..a8d1389  master     -> origin/master
+```
 
+View the difference between your `master` branch and the `origin/master` branch.
+
+```bash
+vagrant:$ git diff origin/master
+diff --git a/Feature2.txt b/Feature2.txt
+deleted file mode 100644
+index a02dca2..0000000
+--- a/Feature2.txt
++++ /dev/null
+@@ -1 +0,0 @@
+-Feature 2
+```
+
+If the changes are appropriate, you can now merge them into your `master` branch
+
+```bash
+vagrant:$ git merge origin/master
+Updating 88468f4..a8d1389
+Fast-forward
+ Feature2.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Feature2.txt
+```
+
+Your repository is now up to date with your remote `origin`.
+
+### Pulling Changes
+
+The `git pull REMOTE BRANCH` will perform both the `fetch` and `merge` commands for you.
+
+Add a new file to the `git-project` repository and pull the changes from `clone-project`.
+
+```bash
+vagrant:$ cd ~/git-project
+vagrant:$ echo 'Feature 3' > Feature3.txt
+vagrant:$ git add Feature3.txt
+vagrant:$ git commit -am "Add Feature 3"
+```
 
 
 ---
