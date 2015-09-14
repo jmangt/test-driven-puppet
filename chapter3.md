@@ -194,6 +194,30 @@ class helloworld(
 * If this resource falls outside of the scope of the module, a dependency is introduced and a new module is to be included to take care of it.
 
 
+```puppet
+# manifests/init.pp
+class helloworld(
+  $salutation = $::helloworld::params::salutation,
+  $who        = $::helloworld::params::who,
+  $owner      = $::helloworld::params::owner,
+) inherits helloworld::params{
+  
+  # this module will take care of creating
+  # the company's default users
+  include mycompany-users-module
+    
+  # our resource makes sure that user "owner" is
+  # present before trying to create the file
+  file{'/tmp/hello-world.txt':
+    content => inline_template("<%= @salutation %>, <%= @who %>"),
+    owner   => $owner,
+    require => User[$owner],
+  }
+  
+}
+```
+
+
 * The module should not use any of the dependency's internal resources. It's interactions should be via the dependency's API.
 
 
