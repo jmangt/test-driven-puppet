@@ -16,7 +16,7 @@ I recommend that you make sure you know about the following terms and that you f
 * Tagging
 * Cloning, Pulling and Pushing from remote repositories
 
-### Install Git
+## Install Git
 
 In an debian based system your can install git via the package manager.
 
@@ -24,7 +24,7 @@ In an debian based system your can install git via the package manager.
 vagrant:$ sudo apt-get instal git-core
 ```
 
-### Configure Git
+## Configure Git
 
 If you have not done so, configure git with your information. Git requires that you provide an email address and a name in order to 'sign' each change to your repository.
 
@@ -35,7 +35,7 @@ vagrant:$ git config --global user.email "you@example.com"
 vagrant:$ git config --global user.name "Your Name"
 ```
 
-### Initialize a Repository
+## Initialize a Repository
 
 Start a simple project using Ruby 2.2.1 and Puppet 4.2.1.
 
@@ -63,7 +63,7 @@ Initialized empty Git repository in /home/vagrant/git-project/.git/
 
 Your directory is now a fully operational git repository. Awesome! (I love git)
 
-### Commit Changes
+## Commit Changes
 
 
 Check the status of your code by using the `git status` command.
@@ -128,7 +128,7 @@ Date:   Mon Sep 14 01:50:07 2015 +0000
     This is the initial commit
 ```
 
-# Branching
+## Branching
 
 Up to this point all the work you have done has been done under the default branch of your repository. This branch is called the `master` branch. 
 
@@ -207,8 +207,6 @@ index 8d31bc1..f0c8937 100644
 ```
 
 The output reflects what files have been updated and what lines are different from the last commit.
-
-
 
 ### Between Branches
 
@@ -289,7 +287,7 @@ The output not reflects the branch merge.
 
 And now, if your don't need it any more, you can delete your development branch.
 
-### Deleting a branch
+## Deleting a branch
 
 Delete a local branch by using the `git branch -d BRANCH` command.
 
@@ -303,7 +301,7 @@ vagrant:$ git branch
 * master
 ```
 
-### Tagging
+## Tagging
 
 A `tag` in Git is a way for your to put a bookmark in your commit history. Think about it as a flag that your can reference for comparing or checking out code. Each tag can also contain a message that can help you remember why is it there.
 
@@ -329,9 +327,9 @@ vagrant:$ git log --decorate --oneline --graph
 * ff3497b This is the initial commit
 ```
 
-### Cloning, Pulling and Pushing
+## Cloning, Pulling and Pushing
 
-
+Now that our repository is reasy 
 
 
 ---
