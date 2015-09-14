@@ -130,73 +130,13 @@ Date:   Mon Sep 14 01:50:07 2015 +0000
 
 # Branching
 
-Up to this point all the work you have done has been done under the default branch of your repository. This branch is called the `master` branch. As you add more commits to your repository. The `master` branch will point to the newest commit by default. You can think about branch names as flags that point to the last commit of that branch.
+Up to this point all the work you have done has been done under the default branch of your repository. This branch is called the `master` branch. 
 
+You can think of a branch a just like you would of a tree branch. In this case a branch is the history of commits that split from the main history of the tree's trunk (master branch).
 
+Each branch you create allows you to add changes to your repository without risk of breaking your stable code.
 
-
-Add a couple of files and commits to your repository.
-
-```bash
-vagrant:$ cd ~/git-project
-vagrant:$ echo 'File1' > File1.txt
-vagrant:$ echo 'File2' > File2.txt
-vagrant:$ echo 'File3' > File3.txt
-vagrant:$ git status
-On branch master
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-
-	File1.txt
-	File2.txt
-	File3.txt
-
-nothing added to commit but untracked files present (use "git add" to track)
-
-vagrant:$ git add File1.txt
-vagrant:$ git commit -m "Add File1"
-[master 5d6601b] Add File1
- 1 file changed, 1 insertion(+)
- create mode 100644 File1.txt
- 
- vagrant:$ git status
- On branch master
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-
-	File2.txt
-	File3.txt
-
-nothing added to commit but untracked files present (use "git add" to track)
-
-vagrant:$ git add .
-vagrant:$ git commit -m "Add File2 and File3"
-[master 7a77219] Add File2 and File3
- 2 files changed, 2 insertions(+)
- create mode 100644 File2.txt
- create mode 100644 File3.txt
-
-vagrant:$ git log
-commit 7a772195a9497ee3f3245e102a0ea208ca6e0fd3
-Author: JManGt <me@jmang.gt>
-Date:   Mon Sep 14 02:03:14 2015 +0000
-
-    Add File2 and File3
-
-commit 5d6601b8bd0e776306e7da620e62792664f50698
-Author: JManGt <me@jmang.gt>
-Date:   Mon Sep 14 02:01:40 2015 +0000
-
-    Add File1
-
-commit c6c9fe911fe4b74e4496ab5db61b1cc9381bc2f8
-Author: JManGt <me@jmang.gt>
-Date:   Mon Sep 14 01:50:07 2015 +0000
-
-    This is the initial commit
-```
-
-At this point your `master` branch (little flag remember) will point to the latest commit `7a772195a9497ee3f3245e102a0ea208ca6e0fd3` or `7a77211` for short.
+Being able to easily create, checkout and merge branches in one of Git's major features.
 
 
 
