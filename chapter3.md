@@ -170,6 +170,7 @@ Where is two of them:
 
 From there, and depending what your class does with it's parameters, you will find yourself with as many scenarios as parameter combinations you can produce.
 
+A rule of thumb for selecting parameters is *"Pass as little parameters as you can to get the job done. Manage other options with sensible defaults."*.
 
 ## Modules
 
