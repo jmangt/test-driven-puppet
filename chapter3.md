@@ -51,9 +51,6 @@ class myclass{
 }
 ```
 
-
-
-
 ## Class Parameters
 
 * All modules should contain a `params` class.
@@ -126,6 +123,30 @@ class helloworld::params{
 }
 ```
 
+## Class API
+
+A classes should be treated like an atomic unit. From the perspective of the module's user there should be **one and only one ** way to interact with it. And that is the class parameters.
+
+**Your class parameters define your class API.
+**
+
+Deciding how to design your class API can be tricky, and it will require some trial an error to get it right.
+
+My suggestion is to use the time tested `it's magical` approach.
+
+This means that you should treat your class like it is magical. It should be able to read  your mind and meet your needs without you telling it anything. 
+
+1. Name it. 
+2. Run it. 
+3. Did it do what you wanted? 
+4. No? 
+5. What did you miss? 
+6. A parameter? Add it. 
+7. Repeat
+
+And so on and so forth.
+
+
 
 ## Modules
 
@@ -142,7 +163,9 @@ The better your apply the SRP, the easier it will be to re use your Puppet modul
 
 ### Module API
 
-A module should be treated like a invisible unit. 
+
+
+
 
 A module 
 
