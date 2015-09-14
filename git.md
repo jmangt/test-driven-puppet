@@ -329,7 +329,67 @@ vagrant:$ git log --decorate --oneline --graph
 
 ## Cloning, Pulling and Pushing
 
-Now that our repository is reasy 
+One of the great things of Git is it's distributed nature. This means that no central server or service is needed to keep track of our commits. Every Git initialized directory contains all it's commit history. 
+
+When you share your code with others you will preform three basic operations. You will `clone` a repository from a remote source into your workstation. You will `pull` updates from the remote source into your local copy. And you will `push` your updates into a remote source.
+
+### Cloning
+
+Clone a remote repository by using the `git clone REPOSITORY DESTINATION` command.
+
+Clone your `git-project` into a new `clone-project` repository.
+
+```bash
+vagrant:$ cd git-project
+vagrant:$ pwd
+/home/vagrant/git-project
+
+vagrant:$ git clone /home/vagrant/git-project clone-project
+Cloning into 'clone-project'...
+done.
+
+vagrant:$ cd clone-project
+vagrant:$ git log --decorate --oneline --graph
+* 88468f4 (HEAD, tag: 0.1.0, origin/master, origin/develop, origin/HEAD, master) Changed Puppet version to 3.7.4
+* aa9ec9e Add Feature1
+* ff3497b This is the initial commit
+```
+
+Your new `clone-project` is an exact duplicate of the original `git-project` repository. It includes all commit history up to the moment in time when you cloned it.
+
+### Pulling
+
+#### Remotes
+
+When you clone a repository Git keeps track of its remote `origin`. This is the path from where it was cloned. The default remote source is named by default `origin`.
+
+You can list your remote sources by using the `git remote -v` command.
+
+```bash
+vagrant:$ cd clone-project
+vagrant:$ git remote -v
+origin	/home/vagrant/git-project (fetch)
+origin	/home/vagrant/git-project (push)
+```
+
+#### Fetch Changes
+
+Pull changes from a remote source by using the `git fetch REMOTE BRANCH` command.
+
+We now can use this `origin` default pull for changes in the original source.
+
+Add a new commit to the original `git-project` directory.
+
+```bash
+vagrant:$ cd ~/git-project
+vagrant:$ echo 'Feature 2' > Feature2.txt
+vagrant:$ git add Feature2.txt
+vagrant:$ git commit -am "Add Feature 2"
+```
+
+Now you can 
+
+
 
 
 ---
