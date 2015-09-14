@@ -199,6 +199,8 @@ vagrant@vagrant-ubuntu-trusty-64:~$
 
 If you try to reach the apache2 instance your will find yourself stuck. Vagrant does not provide a simple way to find the ip address of the VM. You can always ssh into the box and run a `ifconfig` command to find out.
 
+### Private IP address
+
 Use the `config.vm.network` property in your `Vagrantfile` to setup a private ip address for your VM.
 
 ```ruby
@@ -209,6 +211,8 @@ Use the `config.vm.network` property in your `Vagrantfile` to setup a private ip
   config.vm.network "private_network", ip: "192.168.33.10"
 ...
 ```
+
+### Port Forwarding
 
 The second change to your `Vagrantfile` is to forward a port from your host to the corresponding `port 80` in your VM.
 
@@ -222,6 +226,20 @@ The second change to your `Vagrantfile` is to forward a port from your host to t
 ...
 ```
 
+### SSH forward keys
+
+Optinally, if you need to clone git repositories via ssh you can configure Vagrant to forward your session's rsa keys.
+
+Add the following to your `config.ssh` section.
+
+```ruby
+# ~/my-vagrant-project/Vagranfile
+...
+  config.ssh.forward_agent = true
+...
+```
+
+### Reload  to apply changes
 Now, we need to reboot our VM so the changes can take effect.
 
 Use the `vagrant reload` command to reboot your VM.
