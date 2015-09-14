@@ -159,7 +159,7 @@ Read the[ plugin's wiki](https://github.com/nvie/gitflow/wiki/Installation) for 
 For an ubuntu system install it using the default package manager:
 
 ```bash
-$ sudo apt-get intall git-flow -y
+$ sudo apt-get install git-flow -y
 ```
 
 A simplified example of the plugin will look like this.
