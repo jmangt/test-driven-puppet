@@ -11,6 +11,8 @@ I recommend that you make sure you know about the following terms and that you f
 * Initializing a Repository
 * Commit Changes
 * Branching
+* Diffing branches
+* Merging branches
 * Tagging
 * Pushing and Pulling from remote repositories
 * Re-basing
@@ -136,9 +138,122 @@ You can think of a branch a just like you would of a tree branch. In this case a
 
 Each branch you create allows you to add changes to your repository without risk of breaking your stable code.
 
-Being able to easily create, checkout and merge branches in one of Git's major features.
+Being able to easily create, checkout and merge branches in one of Git's major features. And a major asset for us as it allow us to test new features in our Puppet code without risk of breaking our stable code.
+
+Add a `develop` branch to your project and add a `Feature1.txt` file to it.
+
+```bash
+vagrant:$ cd ~/git-project
+# create a new branch
+vagrant:$ git branch develop
+
+# list branches
+vagrant:$ git branch
+  develop
+* master
+
+# checkout the develop branch
+vagrant:$ git checkout develop
+Switched to branch 'develop'
+
+vagrant:$ git branch
+* develop
+  master
+  
+# add and commit a file to develop
+vagrant:$ echo 'This is feature #1' > Feature1.txt
+vagrant:$ git add Feature1.txt
+vagrant:$ git commit -m "Add Feature1"
+```
+
+You now have an alternate history in your repository. 
+
+List the contents of your project and then checkout the `master` branch. You will see that the `Feature1.txt` in no longer present in your directory. Since that file was commited to your `develop` branch, it only exists on it.
+
+```bash
+vagrant:$ cd ~/git-project
+vagrant:$ ls
+Feature1.txt  Gemfile  Gemfile.lock
+
+# check our master branch
+vagrant:$ git checkout master
+vagrant:$ ls
+Gemfile  Gemfile.lock
+
+```
+
+## Diffing 
+
+### Changes in your branch
+
+Use the `git diff` command to view changes in your current branch.
+
+Update the version of puppet in your `Gemfile` to 3.7.4 and list the differences.
+
+```bash
+vagrant:$ cd ~/git-project
+vagrant:$ git checkout develop
+vagrant:$ sed -i 's/4.2.1/3.7.4/' Gemfile
+
+vagrant:$ git diff
+diff --git a/Gemfile b/Gemfile
+index 8d31bc1..f0c8937 100644
+--- a/Gemfile
++++ b/Gemfile
+@@ -2,4 +2,4 @@
+ source "https://rubygems.org"
+
+ # gem "rails"
+-gem 'puppet', '4.2.1'
++gem 'puppet', '3.7.4'
+```
+
+The output reflects what files have been updated and what lines are different from the last commit.
 
 
+
+### Branches
+
+Use the `git diff REF` command to view differences between branches or commits.
+
+List the differences between our `master` and `develop` branches.
+
+```bash
+vagrant:$ cd ~/git-project
+vagrant:$ git checkout develop
+
+vagrant:$ git diff master
+diff --git a/Feature1.txt b/Feature1.txt
+new file mode 100644
+index 0000000..66da8e4
+--- /dev/null
++++ b/Feature1.txt
+@@ -0,0 +1 @@
++This is feature #1
+diff --git a/Gemfile b/Gemfile
+index 8d31bc1..f0c8937 100644
+--- a/Gemfile
++++ b/Gemfile
+@@ -2,4 +2,4 @@
+ source "https://rubygems.org"
+
+ # gem "rails"
+-gem 'puppet', '4.2.1'
++gem 'puppet', '3.7.4'
+```
+
+The output of `git diff master` shows us:
+* There are changes in the Feature1.txt and the Gemfile files
+* Feature1.txt does not exist in the `master` branch
+* Gemfile has been updated in `develop`
+* Changes in `develop` as marked by a [+] and changes in `master` are marked by a [-]
+
+Commit the changes to Gemfile with a meaningful message.
+
+```bash
+vagrant:$ git add Gemfile
+vagrant:$ git commit -m "Changed Puppet version to 3.7.4"
+```
 
 
 ---
