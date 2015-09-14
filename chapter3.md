@@ -107,7 +107,7 @@ class helloworld(
 # manifests/params.pp
 class helloworld::params{
 
-  # Getting values from facter
+  # Getting values from a sytem fact
   if $::tag_salutation == undef {
     $salutation = 'Hello'
     notice("tag_salutation not defined using ${salutation}")
