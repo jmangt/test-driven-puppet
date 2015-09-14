@@ -14,8 +14,9 @@ The following table shows where do all the tools fit.
 | Git | Distributed source control. Gives us the ability to keep track of changes to our module. Easy to generate development branches and tag releases.|
 | Gitflow | Branching methodology. Orders your development cycle. Allows us to collaborate with our team without deadlocking the production releases.  |
 
-There are a few more tools that will visit in the following sections. These are directly related to Puppet. Here is a list of them:
+## Puppet testing
 
+In the following sections we will learn about a different set of tools. These will take advantage of our setup tools to develop and test our Puppet modules.
 
 | Tool | TDD Role |
 | -- | -- |
