@@ -128,7 +128,7 @@ vagrant:$ git add Feature1.md
 vagrant:$ git commit -m "Bug fixed in Feature1"
 ```
 
-Close your release
+Close and tag your release
 
 ```bash
 # merge to master
@@ -136,7 +136,7 @@ vagrant:$ git checkout master
 vagrant:$ git merge release/0.1.0
 
 # tag your release
-vagrant:$ git tag 
+vagrant:$ git tag -a 0.1.0 -m 'Release 0.1.0'
 
 # merge to develop
 vagrant:$ git checkout develop
@@ -145,6 +145,7 @@ vagrant:$ git merge release/0.1.0
 # remove the release branch
 vagrant:$ git branch -D release/0.1.0
 ```
+
 
 
 
