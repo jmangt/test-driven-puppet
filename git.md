@@ -257,7 +257,14 @@ vagrant:$ git commit -m "Changed Puppet version to 3.7.4"
 
 Now that your new feature is ready to go out to production, we need to merge our changes in `develop` back to our `master` branch.
 
+Use the `git merge BRANCH` command to merge the changes from BRANCH into your current branch.
 
+Merge the changes in `develop` into `master`.
+
+```bash
+cd ~/git-project
+
+```
 
 
 ---
