@@ -9,17 +9,24 @@ Use git and gitflow to allow you start a new `feature/refactor` branch. There yo
 The folks at Puppetlabs have taken the time to write great documentation on how to design and structure your modules. Please take some time to go over the ["
 Beginner's Guide to Modules](https://docs.puppetlabs.com/guides/module_guides/bgtm.html#beginner%27s-guide-to-modules)" section in the https://docs.puppetlabs.com website [1].
 
-I would like to just highlight some design decisions that will impact in the way you test your modules.
+I would like to just highlight some concepts and design decisions that will impact in the way you test your modules.
 
 ## Classes
 
 A class is a collection of resources that should be considered *independent* and *encapsulated*.
 
-This means that your `class` should be able to fend for itself.
+This means that:
 
-Your class must not rely on any other resources to be present in your system. unless it checks for them by itself or delegates that task to another class.
+* Your `class` should be able to fend for itself. You can not rely on the system to have a resource in place unless the class itself provides it.
+* Any information your `class` needs should come from the class's `parameters`. 
+* Top level variables like `facters` should be avoided. Except as default values for your class's parameters.
 
-And anything that your `class` needs should come from the class's `parameters`.
+## Class Parameters
+
+* All default values for the module or internal classes should be declared in a `params` class.
+* All internal classes should only inherit from the `params` class. Any other form of inheritance should be avoided.
+* The **only goal** of the `params` class is to provide default values for the rest of the module's class parameters.
+* All top level variables like `facters`, `hiera` lookups, `scope` lookups should terminate in the `params` class.
 
 
 
@@ -28,9 +35,9 @@ And anything that your `class` needs should come from the class's `parameters`.
 *My definition* of **module** is: "*A collection of Puppet resources that administer one and only one piece of technology*".
 
 That means that:
-*  an apache **module** manages Apache
-*  an nginx **module** manages Nginx
-*  an ntp **module** manages Ntp
+*  An apache **module** manages Apache
+*  An nginx **module** manages Nginx
+*  An ntp **module** manages Ntp
 
 If you are not sure where to draw a line in you module's design, read a bit on the 'Single responsabilty principle' (SRP) pattern [2]. This design pattern is use widely in Object Oriented Programming (OOP) and can be applied to your Puppet code as well.
 
