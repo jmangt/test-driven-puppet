@@ -29,7 +29,6 @@ This means that:
 * All top level variables like `facters`, `hiera` lookups, `scope` lookups should terminate in the `params` class.
 
 
-
 ## Modules
 
 *My definition* of **module** is: "*A collection of Puppet resources that administer one and only one piece of technology*".
