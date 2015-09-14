@@ -247,11 +247,34 @@ $ curl 192.168.33.10
 
 In case you wanted other packages, users or directories added to your VM all you need to do is add the corresponding commands to the `provision` section and run `vagrant reload --provision` for the changes to be applied.
 
+
+## Shared directories
+
+When you start your VM, Vagrant takes care of mounting the directory where your `Vagrantfile` resides into the `/vagrant` directory inside your VM.
+
+All changes that you make from your host into that directory, will be automatically reflected in the `/vagrant` directory inside your VM. This is also true for changes made in the `/vagrant` directory inside the VM.
+
+This is a greate feature! Since it allows us to use our favorite text editor in our host to update the code that will be run inside the VM.
+
+Try it! Everybody is doing it...
+
+```bash
+$ cd ~/my-vagrant-project
+$ touch a-new-file.txt
+$ ls
+Vagrantfile    a-new-file.txt
+
+# ssh into the VM
+$ vagrant ssh
+
+vagrant:$ cd /vagrant
+vagrant:$ ls
+Vagrantfile    a-new-file.txt
+```
+
 An that is all you need to know to start using Vagrant.
 
 In later chapters we will use this work flow to configure a production like Puppet environment. Stay tuned.
-
-
 
 ---
 
