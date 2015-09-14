@@ -11,7 +11,7 @@ I recommend that you make sure you know about the following terms and that you f
 * Initializing a Repository
 * Commit Changes
 * Branching
-* Diffing branches
+* View Changes
 * Merging branches
 * Tagging
 * Cloning, Pulling and Pushing from remote repositories
@@ -180,7 +180,7 @@ Gemfile  Gemfile.lock
 
 ```
 
-## Diffing 
+## View Changes
 
 ### Changes in your branch
 
