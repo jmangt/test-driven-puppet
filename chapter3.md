@@ -11,9 +11,32 @@ Beginner's Guide to Modules](https://docs.puppetlabs.com/guides/module_guides/bg
 
 I would like to just highlight some design decisions that will impact in the way you test your modules.
 
+## Classes
+
+A class is a collection of resources that should be considered *independent* and *encapsulated*.
+
+This means that your `class` should be able to fend for itself.
+
+Your class must not rely on any other resources to be present in your system. unless it checks for them by itself or delegates that task to another class.
+
+And anything that your `class` needs should come from the class's `parameters`.
+
+
+
 ## Modules
 
-Write your modules following the 'Single responsabilty principle' (SRP) pattern [2].
+*My definition* of **module** is: "*A collection of Puppet resources that administer one and only one piece of technology*".
+
+That means that:
+*  an apache **module** manages Apache
+*  an nginx **module** manages Nginx
+*  an ntp **module** manages Ntp
+
+If you are not sure where to draw a line in you module's design, read a bit on the 'Single responsabilty principle' (SRP) pattern [2]. This design pattern is use widely in Object Oriented Programming (OOP) and can be applied to your Puppet code as well.
+
+
+
+A module 
 
 Classes
 
