@@ -146,8 +146,6 @@ This means that you should treat your class like it is magical. It should be abl
 
 And so on and so forth.
 
-
-
 ## Modules
 
 *My definition* of **module** is: "*A collection of Puppet resources that administer one and only one piece of technology*".
