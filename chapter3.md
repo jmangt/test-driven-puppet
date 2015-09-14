@@ -17,16 +17,111 @@ A class is a collection of resources that should be considered *independent* and
 
 This means that:
 
-* Your `class` should be able to fend for itself. You can not rely on the system to have a resource in place unless the class itself provides it.
-* Any information your `class` needs should come from the class's `parameters`. 
-* Top level variables like `facters` should be avoided. Except as default values for your class's parameters.
+* Your `class` should be able to fend for itself. You can not rely on the system to have a
+resource in place unless the class itself provides it.
+
+```ruby
+# manifests/init.pp
+class myclass{
+
+    # will fail since we are not making sure
+    # the /opt/mycompany directory is present
+    # before creating our file
+    
+    file{'/opt/mycompany/config.conf':
+     ensure => present
+    }
+}
+```
+
+* Any information your `class` needs should come from the class's `parameters`. Top level variables like `facters` should be avoided. Except as default values for your class's parameters.
+
+```ruby
+# manifests/init.pp
+class myclass{
+
+  # the value of owner is being set my a top scope variable
+  # but the variable is not defined within the class
+  # so we are not sure where and if the value was set
+  
+  file{'/opt/mycompany/config.conf':
+    ensure => present,
+    owner  => $::the_owner,
+  }
+}
+```
+
+
+
 
 ## Class Parameters
 
-* All default values for the module or internal classes should be declared in a `params` class.
+* All modules should contain a `params` class.
+
+```bash
+$ cd ~/helloworld
+.
+|--manifests
+|  |-- init.pp
+|  |-- params.pp
+```
+
+* All default values for the module or internal classes should be declared in the `params` class.
+
+```puppet
+# manifests/params.pp
+class helloworld::params{
+  $salutation = 'Hello'
+  $who        = 'World'
+}
+```
+
 * All internal classes should only inherit from the `params` class. Any other form of inheritance should be avoided.
+
+```puppet
+# manifests/init.pp
+class helloworld inherits helloworld::params{
+...
+}
+```
+
 * The **only goal** of the `params` class is to provide default values for the rest of the module's class parameters.
+
+```puppet
+# manifests/init.pp
+class helloworld(
+  $salutation = $::helloworld::params::salutation,
+  $who        = $::helloworld::params::who,
+) inherits helloworld::params{
+
+  file{'/tmp/hello-world.txt':
+    content => inline_template("<%= @salutation %>, <%= @who %>"),
+  }
+  
+}
+```
+
 * All top level variables like `facters`, `hiera` lookups, `scope` lookups should terminate in the `params` class.
+
+```puppet
+# manifests/params.pp
+class helloworld::params{
+
+  if $::tag_salutation == undef {
+    $salutation = 'Hello'
+    notice("tag_salutation not defined using ${salutation}")
+  } else {
+    $salutation = $::tag_salutation
+  }
+  
+  if hiera('who') == undef {
+    $who = 'World'
+    notice("who not defined using ${who}")
+  } else {
+    $who = hiera('who')
+  }
+}
+```
 
 
 ## Modules
