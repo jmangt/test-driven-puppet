@@ -175,13 +175,115 @@ vagrant:$ git add README.md VERSION
 vagrant:$ git commit -m "Initial commit"
 ```
 
-Initialize gitflow in your project.
+Initialize git-flow in your project.
 ```bash
 # Initialize with all defaults
-vagrant:$ gitflow init -d
+vagrant:(master)$ git flow init -d
+Using default branch names.
 
+Which branch should be used for bringing forth production releases?
+   - master
+Branch name for production releases: [master]
+Branch name for "next release" development: [develop]
+
+How to name your supporting branch prefixes?
+Feature branches? [feature/]
+Release branches? [release/]
+Hotfix branches? [hotfix/]
+Support branches? [support/]
+Version tag prefix? []
 ```
 
+Start a feature branch
+
+```bash
+vagrant:(develop)$ git flow feature start my-feature
+Switched to a new branch 'feature/my-feature'
+
+Summary of actions:
+- A new branch 'feature/my-feature' was created, based on 'develop'
+- You are now on branch 'feature/my-feature'
+
+Now, start committing on your feature. When done, use:
+
+     git flow feature finish my-feature
+```
+
+Code and commit your new feature.
+
+```bash
+vagrant:(feature/my-feature)$ echo '# My first feature' > Feature1.md
+vagrant:(feature/my-feature)$ git add Feature1.md
+vagrant:(feature/my-feature)$ git commit -m "Completed Feature 1"
+```
+
+Close your feature branch
+
+```bash
+vagrant:(feature/my-feature)$ git flow feature finish my-feature
+Switched to branch 'develop'
+Updating edb1801..8c83b0b
+Fast-forward
+ Feature1.md | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Feature1.md
+Deleted branch feature/my-feature (was 8c83b0b).
+
+Summary of actions:
+- The feature branch 'feature/my-feature' was merged into 'develop'
+- Feature branch 'feature/my-feature' has been locally deleted
+- You are now on branch 'develop'
+```
+
+Start a release
+
+```bash
+vagrant:(develop)$ git flow release start 0.1.0
+Switched to a new branch 'release/0.1.0'
+
+Summary of actions:
+- A new branch 'release/0.1.0' was created, based on 'develop'
+- You are now on branch 'release/0.1.0'
+
+Follow-up actions:
+- Bump the version number now!
+- Start committing last-minute fixes in preparing your release
+- When done, run:
+
+     git flow release finish '0.1.0'
+```
+
+Bump version and fix bugs
+
+```bash
+vagrant:(release/0.1.0)$ echo '0.1.0' > VERSION
+vagrnat:(release/0.1.0)$ git add VERSION
+vagrant:(release/0.1.0)$ git commit -m "bump version 0.1.0"
+vagrant:(release/0.1.0)$ echo 'Die bug die!!!' >> Feature1.md
+vagrant:(release/0.1.0)$ git add Feature1.md
+vagrant:(release/0.1.0)$ git commit -m "Bug fixed in Feature1"
+```
+
+Finish your release
+```bash
+vagrant:$ git flow release finish 0.1.0 -m "Release 0.1.0"
+Switched to branch 'master'
+Merge made by the 'recursive' strategy.
+ Feature1.md | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Feature1.md
+Switched to branch 'develop'
+Already up-to-date!
+Merge made by the 'recursive' strategy.
+Deleted branch release/0.1.0 (was 8c83b0b).
+
+Summary of actions:
+- Release branch 'release/0.1.0' has been merged into 'master'
+- The release was tagged '0.1.0'
+- Release tag '0.1.0' has been back-merged into 'develop'
+- Release branch 'release/0.1.0' has been locally deleted
+- You are now on branch 'develop'
+```
 
 ---
 
