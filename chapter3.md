@@ -120,6 +120,7 @@ class helloworld::params{
   } else {
     $who = hiera('who')
   }
+  
 }
 ```
 
