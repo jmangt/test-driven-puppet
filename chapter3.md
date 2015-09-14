@@ -148,7 +148,7 @@ And so on and so forth.
 
 ***Providing a good API for your class might be the most important part of making your code testable.***
 
-A solid API will allow you provide multiple test scenarios. Each scenario will be based on the permutations of your parameters.
+A solid API will allow you provide multiple test scenarios. Each scenario will be based on the combinations of your parameters.
 
 ```puppet
 # manifests/init.pp
@@ -161,8 +161,14 @@ class helloworld(
 }
 ```
 
-For example, class helloworld has tree parameters `salutation`, `who` and `owner`. This means that you have at least two basic scenarios. The first is *"what happens when i call the class without passing any parameters?*". And the second *"what happens when i call the class passing all parameters?"*. From there, and depending what your class does with it's parameters you will find yourself with as many scenarios as parameter combinations you can produce.
+For example, class helloworld has tree parameters `salutation`, `who` and `owner`. This gives you at least eight scenarios, based on whether you pass or don't pass values to the class when your call it.
 
+Where is two of them:
+
+* what happens when i call the class without passing any parameters?
+*what happens when i call the class passing all parameters?"
+
+From there, and depending what your class does with it's parameters, you will find yourself with as many scenarios as parameter combinations you can produce.
 
 
 ## Modules
