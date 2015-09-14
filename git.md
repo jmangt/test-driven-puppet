@@ -462,6 +462,10 @@ Fast-forward
 
 Having a centralized Git repository is useful when working with a team. The commands and work flow are the same whether your remote is a local directory or an URL in some internet server.
 
+Several companies offer centralized git repositories for you or your teams. Take a look at [GitHub.com](https://github.com/) or [BitBucket.org](https://bitbucket.org) if your are looking for such a service.
+
+ Git is the default way that public Puppet modules are shared. And most of this modules are hosted in Github.com. Go and take a look around you will be surprised what useful things you can find.
+
 ---
 
 [1] Pro Git. A must for learning about the tool, this book has been released under a Creative Commons license. And it is available for download at http://git-scm.com/book/en/v2
