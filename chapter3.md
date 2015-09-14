@@ -107,6 +107,7 @@ class helloworld(
 # manifests/params.pp
 class helloworld::params{
 
+  # Getting values from facter
   if $::tag_salutation == undef {
     $salutation = 'Hello'
     notice("tag_salutation not defined using ${salutation}")
@@ -114,6 +115,7 @@ class helloworld::params{
     $salutation = $::tag_salutation
   }
   
+  # Getting values from Hiera
   if hiera('who') == undef {
     $who = 'World'
     notice("who not defined using ${who}")
