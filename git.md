@@ -14,9 +14,7 @@ I recommend that you make sure you know about the following terms and that you f
 * Diffing branches
 * Merging branches
 * Tagging
-* Pushing and Pulling from remote repositories
-* Re-basing
-* Stashing Changes
+* Cloning, Pulling and Pushing from remote repositories
 
 ### Install Git
 
@@ -256,6 +254,11 @@ vagrant:$ git commit -m "Changed Puppet version to 3.7.4"
 ```
 
 ## Merging Changes
+
+Now that your new feature is ready to go out to production, we need to merge our changes in `develop` back to our `master` branch.
+
+
+
 
 ---
 
