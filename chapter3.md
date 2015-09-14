@@ -138,7 +138,11 @@ That means that:
 
 If you are not sure where to draw a line in you module's design, read a bit on the 'Single responsabilty principle' (SRP) pattern [2]. This design pattern is use widely in Object Oriented Programming (OOP) and can be applied to your Puppet code as well.
 
+The better your apply the SRP, the easier it will be to re use your Puppet modules, and the easier it will be to test them.
 
+### Module API
+
+A module should be treated like a invisible unit. 
 
 A module 
 
