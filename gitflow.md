@@ -168,11 +168,11 @@ Create and version control a new project.
 ```bash
 vagrant:$ mkdir ~/gitflow-plugin-project
 vagrant:$ cd ~/gitflow-plugin-project
-vagrant:$ git init
-vagrant:$ echo '# My project' > README.md
-vagrant:$ echo '0.0.0' > VERSION
-vagrant:$ git add README.md VERSION
-vagrant:$ git commit -m "Initial commit"
+vagrant:(master)$ git init
+vagrant:(master)$ echo '# My project' > README.md
+vagrant:(master)$ echo '0.0.0' > VERSION
+vagrant:(master)$ git add README.md VERSION
+vagrant:(master)$ git commit -m "Initial commit"
 ```
 
 Initialize git-flow in your project.
