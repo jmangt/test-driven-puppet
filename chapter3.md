@@ -159,7 +159,6 @@ If you are not sure where to draw a line in you module's design, read a bit on t
 
 The better your apply the SRP, the easier it will be to re use your Puppet modules, and the easier it will be to test them.
 
-### Module API
 
 
 
