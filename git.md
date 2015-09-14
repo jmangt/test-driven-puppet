@@ -303,6 +303,32 @@ vagrant:$ git branch
 * master
 ```
 
+### Tagging
+
+A `tag` in Git is a way for your to put a bookmark in your commit history. Think about it as a flag that your can reference for comparing or checking out code. Each tag can also contain a message that can help you remember why is it there.
+
+In our work flow we will use them to mark a new release in our Puppet module.
+
+Add a tag to the latest commit of your `master` branch.
+
+```bash
+vagrant:$ cd ~/git-project
+vagrant:$ git checkout master
+
+# tag as release 0.1.0
+vagrant:$ git tag -a 0.1.0 -m 'Release version 0.1.0'
+
+# list your tags
+vagrant:$ git tag
+0.1.0
+
+# view your tag in git log
+vagrant:$ git log --decorate --oneline --graph
+* 88468f4 (HEAD, tag: 0.1.0, master, develop) Changed Puppet version to 3.7.4
+* aa9ec9e Add Feature1
+* ff3497b This is the initial commit
+```
+
 ---
 
 [1] Pro Git. A must for learning about the tool, this book has been released under a Creative Commons license. And it is available for download at http://git-scm.com/book/en/v2
