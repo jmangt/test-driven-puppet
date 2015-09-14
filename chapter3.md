@@ -204,7 +204,7 @@ class helloworld(
   
   # this module will take care of creating
   # the company's default users
-  include mycompany-users-module
+  include users
     
   # our resource makes sure that user "owner" is
   # present before trying to create the file
@@ -217,19 +217,8 @@ class helloworld(
 }
 ```
 
-
 * The module should not use any of the dependency's internal resources. It's interactions should be via the dependency's API.
 
-
-
-
-
-
-A module 
-
-Classes
-
-Parameters
 
 Autoload paths
 
