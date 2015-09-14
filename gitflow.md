@@ -6,6 +6,8 @@ I will strongly recommend that you read the original post 'A successful Git bran
 
 Gitflow is important to us because it allows us to generate new feature branches without the fear of breaking our release branch. We can then test new features and only release a new version when they are stable.
 
+When we work with Puppet modules we will generate new releases using this work flow. As each module will have a version, Gitflow is the perfect match to generate them. Also it will allow us to work under feature branches and have experimental version of our module's dependencies.
+
 ## Workflow
 
 Here is a run down of the Gitflow work flow.
