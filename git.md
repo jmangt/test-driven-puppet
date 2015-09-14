@@ -329,6 +329,7 @@ vagrant:$ git log --decorate --oneline --graph
 * ff3497b This is the initial commit
 ```
 
+ddd
 ---
 
 [1] Pro Git. A must for learning about the tool, this book has been released under a Creative Commons license. And it is available for download at http://git-scm.com/book/en/v2
