@@ -148,9 +148,43 @@ vagrant:$ git merge release/0.1.0
 vagrant:$ git branch -D release/0.1.0
 ```
 
+## Gitflow Plugin
 
+Same yourself some time and typos and install nvie's git-flow plugin.
+
+The plugin is "A collection of Git extensions to provide high-level repository operations for Vincent Driessen's branching model.". In essence, the plugin takes care of the repetitive part of the methodology. It also enforces some common sense rules so you don't shoot yourself in the foot.
+
+Read the[ plugin's wiki](https://github.com/nvie/gitflow/wiki/Installation) for instructions on how to install it in your system. [2]
+
+For an ubuntu system install it using the default package manager:
+
+```bash
+$ sudo apt-get intall git-flow -y
+```
+
+A simplified example of the plugin will look like this.
+
+Create and version control a new project.
+```bash
+vagrant:$ mkdir ~/gitflow-plugin-project
+vagrant:$ cd ~/gitflow-plugin-project
+vagrant:$ git init
+vagrant:$ echo '# My project' > README.md
+vagrant:$ echo '0.0.0' > VERSION
+vagrant:$ git add README.md VERSION
+vagrant:$ git commit -m "Initial commit"
+```
+
+Initialize gitflow in your project.
+```bash
+# Initialize with all defaults
+vagrant:$ gitflow init -d
+
+```
 
 
 ---
 
 [1] A successful Git branching model: http://nvie.com/posts/a-successful-git-branching-model/
+
+[2] Installing git-flow: https://github.com/nvie/gitflow/wiki/Installation
