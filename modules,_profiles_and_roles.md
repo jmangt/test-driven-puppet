@@ -2,7 +2,7 @@
 
 The "[Module, Profile, Role](https://puppetlabs.com/presentations/designing-puppet-rolesprofiles-pattern)"[3] pattern is the preferd way of combining simple modules to achieve a greater purpose.
 
-A way to look a the pattern is:
+A way to look at the pattern is:
 
 * **Module**: is a single piece of technology. For example: apache or php.
 * **Profile**: is a collection of technologies and common configuration. For example: Wordpress. A Wordpress profile includes, apache, php and the Wordpress framework. As well as a way to declare a new vhost in apache and configuring the Wordpress instance.
