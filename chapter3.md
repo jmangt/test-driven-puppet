@@ -219,6 +219,8 @@ class mymodule::directories{
 
 ## Modules, Profiles and Roles
 
+The "[Module, Profile, Role](https://puppetlabs.com/presentations/designing-puppet-rolesprofiles-pattern)"[3] pattern 
+
 ### Modules
 
 *My definition* of **module** is: "*A collection of Puppet resources that administer one and only one piece of technology*".
@@ -303,3 +305,5 @@ Module, Profile, Role
 [1] Beginner's Guide to Modules: https://docs.puppetlabs.com/guides/module_guides/bgtm.html#beginner%27s-guide-to-modules
 
 [2] Single responsability principle: http://www.objectmentor.com/resources/articles/srp.pdf
+
+[3] Designing Puppet: Roles/Profiles Pattern: https://puppetlabs.com/presentations/designing-puppet-rolesprofiles-pattern
