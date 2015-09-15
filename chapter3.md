@@ -12,11 +12,6 @@ Beginner's Guide to Modules](https://docs.puppetlabs.com/guides/module_guides/bg
 I would like to just highlight some concepts and design decisions that will impact in the way you test your modules.
 
 
-
-
-
-
-
 ---
 
 [1] Beginner's Guide to Modules: https://docs.puppetlabs.com/guides/module_guides/bgtm.html#beginner%27s-guide-to-modules
