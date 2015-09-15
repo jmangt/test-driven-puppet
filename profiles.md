@@ -10,3 +10,5 @@ Here a are some examples:
 A profile's responsibility is too coordinate multiple pieces of technology. Not by managing them itself but delegating that responsibility to their specific modules. 
 
 Must of the time a profile will set up scaffolding for an application using that particular technology stack.
+
+In the Wordpress example the profile will deleted 
