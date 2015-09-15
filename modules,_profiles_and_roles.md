@@ -9,14 +9,6 @@ A way to look at the pattern is:
 * **Role**: is a collection of profiles that configure a **host**. For example: We can use a Wordpress profile and a SendMail profile to configure **hotgod.com** and maybe **cutekitties.org**.
 
 
-### Why should I use this over complicated thing?
-
-Because it is good for you ;)
-
-When it comes to testing the pattern is useful in to main things:
-1. You can test the components in isolation.
-2. It creates a clear separation of responsibilities between your components.
-
 In our Wordpress example we are able to split the technology components into two very clear modules, `apache` and `php`.
 
 ```puppet
@@ -81,6 +73,19 @@ class cutekittensorg{
   }
 }
 ```
+
+### Why should I use this over complicated thing?
+
+Because it is good for you ;)
+
+When it comes to testing the pattern is useful in to main things:
+1. You can test the components in isolation.
+2. It creates a clear separation of responsibilities between your components.
+
+**This means that you can pinpoint who's fault is it when a Puppet run fails** . If your individual modules are passing all their tests, but when you put them together something fails it becomes a lot easier to figure out where the problem is. 
+
+If you are reading this book your have probably experience the pain of trying to untangle a ball of dependencies in a giant monolithic module.
+
 
 
 ---
