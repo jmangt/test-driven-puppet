@@ -11,7 +11,7 @@
    * [Gitflow](gitflow.md)
    * [Putting it all together](putting_it_all_together.md)
 * [Organizing Puppet modules](chapter3.md)
-   * Classes
+   * [Classes](classes.md)
    * [Class API](class_api.md)
    * [Class Parameters](class_parameters.md)
    * [Class Naming and Autoload Path](class_naming_and_autoload_path.md)
