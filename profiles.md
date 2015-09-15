@@ -11,4 +11,9 @@ A profile's responsibility is too coordinate multiple pieces of technology. Not 
 
 Must of the time a profile will set up scaffolding for an application using that particular technology stack.
 
-In the Wordpress example the profile will deleted 
+In the Wordpress example, the `worpress` profile will delegate installing and configuring Apache and PHP to their respective modules. The only job of the profile is to pass the necessary parameters to them.
+
+
+
+
+A profile will usually manage 
