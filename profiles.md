@@ -13,7 +13,24 @@ Must of the time a profile will set up scaffolding for an application using that
 
 In the Wordpress example, the `worpress` profile will delegate installing and configuring Apache and PHP to their respective modules. The only job of the profile is to pass the necessary parameters to them.
 
-
+```ruby
+# Wordpress Profile
+# wordpress/manifests/init.pp
+class wordpress(site_name => 'default'){
+  class{'apache':
+    vhost => $site_name,
+  }
+  contain apache
+  
+  class{'php':
+    version => '5.3',
+    require => Class['apache']
+  }
+  contain php
+  
+  ...
+}
+```
 
 
 A profile will usually manage 
