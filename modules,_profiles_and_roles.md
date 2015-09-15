@@ -72,6 +72,14 @@ class hotdogcom{
     site_name => 'hotdog.com',
   }
 }
+
+# CuteKittens.org Role
+# cutekittensorg/manifests/init.pp
+class cutekittensorg{
+  class{'wordpress':
+    site_name => 'cutekittens.org',
+  }
+}
 ```
 
 
