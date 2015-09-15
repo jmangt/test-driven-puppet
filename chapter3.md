@@ -16,6 +16,5 @@ I would like to just highlight some concepts and design decisions that will impa
 
 [1] Beginner's Guide to Modules: https://docs.puppetlabs.com/guides/module_guides/bgtm.html#beginner%27s-guide-to-modules
 
-[2] Single responsability principle: http://www.objectmentor.com/resources/articles/srp.pdf
 
 [3] Designing Puppet: Roles/Profiles Pattern: https://puppetlabs.com/presentations/designing-puppet-rolesprofiles-pattern
