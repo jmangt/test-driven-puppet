@@ -11,10 +11,10 @@
    * [Gitflow](gitflow.md)
    * [Putting it all together](putting_it_all_together.md)
 * [Organizing Puppet modules](chapter3.md)
+   * [Modules, Profiles and Roles](modules,_profiles_and_roles.md)
    * Classes
    * [Class API](class_api.md)
    * [Class Naming and Autoload Path](class_naming_and_autoload_path.md)
-* [Modules, Profiles and Roles](modules,_profiles_and_roles.md)
 * [Distributing Puppet modules](chapter4.md)
 * [Testing Puppet modules](chapter5.md)
    * Test Driven Development
