@@ -14,6 +14,5 @@ A way to look at the pattern is:
 
 ---
 
-[2] Single responsability principle: http://www.objectmentor.com/resources/articles/srp.pdf
 
 [3] Designing Puppet: Roles/Profiles Pattern: https://puppetlabs.com/presentations/designing-puppet-rolesprofiles-pattern
