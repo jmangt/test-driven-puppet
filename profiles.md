@@ -2,7 +2,7 @@
 
 A **profile** is a collection of technologies, brought together for a specific purpose.
 
-Here a are some examples:
+ere a are some examples:
 * a Wordpress Site
 * a Ruby on Rails Application
 * a Node.js Application
@@ -38,4 +38,29 @@ class wordpress (
 A profile will define a set of defaults for the technology stack. These are to be placed both as parameters to the module and as variables in the `params` class of the module. 
 
 ```puppet
+# wordpress/manifests/params.pp
+class wordpress::params {
+  $site_name   = 'default'
+  $php_version = '5.3'
+}
+
+# wordpress/manifests/init.pp
+class wordpress(
+  site_name   => $::wordpress::params::site_name,
+  php_version => $::wordpress::params::php_version,
+){
+ 
+  class{'apache':
+    vhost => $site_name,
+  }
+  contain apache
+  
+  class{'php':
+    version => $php_version,
+    require => Class['apache']
+  }
+  contain php
+
+}
+
 ```
