@@ -35,5 +35,4 @@ class wordpress (
 }
 ```
 
-
-A profile will usually manage 
+A profile will 
