@@ -79,8 +79,8 @@ class nodeapp::params {
 class nodeapp (
   $nodejs_version = $::nodeapp::params::nodejs_version,
   $user           = $::nodeapp::params::application_user,
-  $name           = $::nodeapp::params::name,
-  $directory      = $::nodeapp::params::directory,
+  $name           = $::nodeapp::params::application_name,
+  $directory      = $::nodeapp::params::application_directory,
 ){
 
   class{'nodejs':
