@@ -214,6 +214,7 @@ class mymodule::directories{
 ...
 }
 ```
+
 * Internal Classes and Defines must be namespaced according to the modules name.
 
 ## Modules
