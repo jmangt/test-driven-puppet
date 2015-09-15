@@ -16,7 +16,7 @@
    * [Class Parameters](class_parameters.md)
    * [Class Naming and Autoload Path](class_naming_and_autoload_path.md)
    * [Modules, Profiles and Roles](modules,_profiles_and_roles.md)
-       * Modules
+       * [Modules](modules.md)
 * [Distributing Puppet modules](chapter4.md)
 * [Testing Puppet modules](chapter5.md)
    * Test Driven Development
