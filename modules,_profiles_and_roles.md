@@ -78,7 +78,7 @@ class cutekittensorg{
 
 Because it is good for you ;)
 
-When it comes to testing the pattern is useful in to main things:
+When it comes to testing, the pattern is useful in to main things:
 1. You can test the components in isolation.
 2. It creates a clear separation of responsibilities between your components.
 
