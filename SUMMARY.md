@@ -11,6 +11,7 @@
    * [Gitflow](gitflow.md)
    * [Putting it all together](putting_it_all_together.md)
 * [Organizing Puppet modules](chapter3.md)
+   * Modules, Profiles and Roles
 * [Distributing Puppet modules](chapter4.md)
 * [Testing Puppet modules](chapter5.md)
    * Test Driven Development
