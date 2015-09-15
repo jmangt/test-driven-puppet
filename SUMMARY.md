@@ -19,7 +19,7 @@
        * [Modules](modules.md)
        * [Profiles](profiles.md)
            * [Profiles as Defined Resources](profiles_as_defined_resources.md)
-           * Example: Wordpress
+           * [Example: Wordpress](example_wordpress.md)
            * Example: Node.js
        * Roles
 * [Distributing Puppet modules](chapter4.md)
