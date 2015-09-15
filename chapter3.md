@@ -217,7 +217,9 @@ class mymodule::directories{
 
 * Internal Classes and Defines must be namespaced according to the modules name.
 
-## Modules
+## Modules, Profiles and Roles
+
+### Modules
 
 *My definition* of **module** is: "*A collection of Puppet resources that administer one and only one piece of technology*".
 
