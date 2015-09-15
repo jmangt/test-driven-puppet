@@ -219,7 +219,11 @@ class mymodule::directories{
 
 ## Modules, Profiles and Roles
 
-The "[Module, Profile, Role](https://puppetlabs.com/presentations/designing-puppet-rolesprofiles-pattern)"[3] pattern 
+The "[Module, Profile, Role](https://puppetlabs.com/presentations/designing-puppet-rolesprofiles-pattern)"[3] pattern is the preferd way of combining simple modules to achieve a greater purpose.
+
+Defining the pattern can be tricky so I will try to simplify it by using an example.
+
+Asume that you need to 
 
 ### Modules
 
