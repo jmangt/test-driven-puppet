@@ -13,6 +13,7 @@
 * [Organizing Puppet modules](chapter3.md)
    * [Modules, Profiles and Roles](modules,_profiles_and_roles.md)
    * Classes
+   * Class Naming and Autoload Path
 * [Distributing Puppet modules](chapter4.md)
 * [Testing Puppet modules](chapter5.md)
    * Test Driven Development
