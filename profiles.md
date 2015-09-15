@@ -93,7 +93,14 @@ class nodeapp (
     directory => "${directory}/${name}"
   }
   contain nodeapp::directories
-    
+}
+
+# myapp/manifests/init.pp
+class myapp{
+  class{'nodeapp':
+   name => 'myapp'
+  }
+  contain 'nodeapp'
 }
 ```
 
