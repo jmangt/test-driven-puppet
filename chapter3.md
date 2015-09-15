@@ -123,6 +123,26 @@ class helloworld::params{
 }
 ```
 
+* Variables should always be `local`. The only allowed namespaced variables should be the ones that the [class parameters](#class-parameters) uses as defaults.
+
+```puppet
+# mymodule/manifests/init.pp
+class mymodule(){
+  
+  include directories
+  
+  # By using the $::directories::default_path variable
+  # we have locked ourselves out of being able to full test
+  # this resource. Can you figure out why?
+  
+  $directory = "${::directories::default_path}/a-directory"
+  file{$directory:
+    ensure => directory,
+    require => File[$::directories::default_path]
+  }
+}
+```
+
 ## Class API
 
 A classes should be treated like an atomic unit. From the perspective of the module's user there should be **one and only one ** way to interact with it. And that is the class parameters.
@@ -172,6 +192,32 @@ From there, and depending what your class does with it's parameters, you will fi
 
 A rule of thumb for selecting parameters is *"Pass as little parameters as you can to get the job done. Manage other options with sensible defaults."*.
 
+## Class Naming and Autoload Path
+
+Puppet is picky when it comes to naming your files. If your want Puppet to play nice you need to name your files in classes in a specific way.
+
+You can read about the subject in the "[Language: Namespaces and Autoloadin](https://docs.puppetlabs.com/puppet/latest/reference/lang_namespaces.html)g" section of the Puppetlabs website.
+
+In a nutshell:
+
+* The main class of the module must live in the `init.pp` file.
+* Classes and Defines must have a file of their own.
+
+```puppet
+# mymodule/manifests/init.pp
+class mymodule(){
+  include mymodule::directories
+}
+
+# this class should be placed in the directories.pp file
+class mymodule::directories{
+...
+}
+```
+* Internal Classes and Defines must be namespaced according to the modules name.
+
+```
+
 ## Modules
 
 *My definition* of **module** is: "*A collection of Puppet resources that administer one and only one piece of technology*".
@@ -218,7 +264,6 @@ class helloworld(
 ```
 
 * If this resource falls outside of the scope of the module, a dependency is introduced and a new module is to be included to take care of it.
-
 
 ```puppet
 # manifests/init.pp
