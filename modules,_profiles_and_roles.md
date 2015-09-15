@@ -6,7 +6,7 @@ A way to look at the pattern is:
 
 * **Module**: is a single piece of technology. For example: apache or php.
 * **Profile**: is a collection of technologies and common configuration. For example: Wordpress. A Wordpress profile includes, apache, php and the Wordpress framework. As well as a way to declare a new vhost in apache and configuring the Wordpress instance.
-* **Role**: is a collection of profiles that configure a **host**. For example: We can use a Wordpress profile and a SendMail profile to configure **hotgod.com** and maybe **cutekitties.org**.
+* **Role**: is a collection of profiles that configure a **host**. For example: We can use a Wordpress profile and a SendMail profile to configure **hotdog.com** and maybe **cutekitties.org**.
 
 
 In our Wordpress example we are able to split the technology components into two very clear modules, `apache` and `php`.
