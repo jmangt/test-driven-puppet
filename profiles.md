@@ -86,11 +86,13 @@ class nodeapp (
   class{'nodejs':
     version => $nodejs_version
   }
+  contain nodejs
   
   class{'nodeapp::directories':
     owner     => $user,
     directory => "${directory}/${name}"
   }
+  contain nodeapp::directories
     
 }
 ```
