@@ -77,3 +77,10 @@ class helloworld(
 ```
 
 * The module should not use any of the dependency's internal resources. It's interactions should be via the dependency's API.
+
+
+
+---
+
+[2] Single responsability principle: http://www.objectmentor.com/resources/articles/srp.pdf
+
