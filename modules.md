@@ -9,7 +9,7 @@ That means that:
 *  An nginx **module** manages Nginx
 *  An ntp **module** manages Ntp
 
-If you are not sure where to draw a line in you module's design, read a bit on the 'Single responsabilty principle' (SRP) pattern [2]. This design pattern is use widely in Object Oriented Programming (OOP) and can be applied to your Puppet code as well.
+If you are not sure where to draw a line in you module's design, read a bit on the 'Single responsabilty principle' (SRP) pattern [1]. This design pattern is use widely in Object Oriented Programming (OOP) and can be applied to your Puppet code as well.
 
 The better your apply the SRP, the easier it will be to re use your Puppet modules, and the easier it will be to test them.
 
@@ -76,4 +76,4 @@ class helloworld(
 
 ---
 
-[2] Single responsability principle: http://www.objectmentor.com/resources/articles/srp.pdf
+[1] Single responsability principle: http://www.objectmentor.com/resources/articles/srp.pdf
