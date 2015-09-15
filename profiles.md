@@ -64,7 +64,7 @@ class wordpress(
 }
 ```
 
-Another example of a profile could be a Node.js Stack. In this case we will need not only modules that take care of installing Node.js, but also some directories to place our node application.
+Another example of a profile could be a Node.js Stack. In this case we will need not only modules that take care of installing Node.js, but also some directories to place our node application. Higher level modules can make 
 
 ```puppet
 # nodeapp/manifests/params.pp
