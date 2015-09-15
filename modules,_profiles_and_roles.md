@@ -23,7 +23,7 @@ class php(version => '5.3'){}
 
 Then we put those together (after testing each one individually) into a `wordpress` profile. The profile will download the required version of Wordpress and by using the `apache` and `php` modules it should be able to create an generic wordpress site.
 
-```puppet
+```ruby
 # Wordpress Profile
 # wordpress/manifests/init.pp
 class wordpress(site_name => 'default'){
