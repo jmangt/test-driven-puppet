@@ -82,11 +82,11 @@ When it comes to testing the pattern is useful in to main things:
 1. You can test the components in isolation.
 2. It creates a clear separation of responsibilities between your components.
 
-**This means that you can pinpoint who's fault is it when a Puppet run fails** . If your individual modules are passing all their tests, but when you put them together something fails it becomes a lot easier to figure out where the problem is. 
+**This means that you can pinpoint who's fault is it when a Puppet run fails** . 
 
-If you are reading this book your have probably experience the pain of trying to untangle a ball of dependencies in a giant monolithic module.
+If your individual modules are passing all their tests, but when you put them together something fails, it becomes a lot easier to figure out where the problem is. 
 
-
+If you are reading this book your have probably experience the pain of trying to untangle a ball of dependencies in a giant monolithic module. So spending some time to split your module into the Module, Profile, Role pattern is time well spent.
 
 ---
 
