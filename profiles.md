@@ -19,6 +19,7 @@ In the Wordpress example, the `worpress` profile will delegate installing and co
 class wordpress (
  site_name => 'default',
 ){
+
   class{'apache':
     vhost => $site_name,
   }
