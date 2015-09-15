@@ -23,3 +23,5 @@ class mysharedsite{
 
 This would fail with a `Error: Duplicate declaration: ... is already declared in file ...; cannot redeclare at ... on node ...` error.
 
+If we want to avoid this our `wordpress` profile should be re writen as a custom resource. The concept behind what the profile does remains the same. We just need some syntax re adjustments.
+
