@@ -13,7 +13,7 @@ Must of the time a profile will set up scaffolding for an application using that
 
 In the Wordpress example, the `worpress` profile will delegate installing and configuring Apache and PHP to their respective modules. The profile is in charge of passing the necessary parameters to them.
 
-```ruby
+```puppet
 # Wordpress Profile
 # wordpress/manifests/init.pp
 class wordpress (
@@ -35,4 +35,7 @@ class wordpress (
 }
 ```
 
-A profile will 
+A profile will define a set of defaults for the technology stack. These are to be placed both as parameters to the module and as variables in the `params` class of the module. 
+
+```puppet
+```
