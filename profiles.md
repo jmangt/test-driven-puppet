@@ -17,7 +17,7 @@ In the Wordpress example, the `worpress` profile will delegate installing and co
 # Wordpress Profile
 # wordpress/manifests/init.pp
 class wordpress (
- site_name => 'default'
+ site_name => 'default',
 ){
   class{'apache':
     vhost => $site_name,
