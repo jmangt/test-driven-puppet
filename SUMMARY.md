@@ -18,6 +18,7 @@
    * [Modules, Profiles and Roles](modules,_profiles_and_roles.md)
        * [Modules](modules.md)
        * [Profiles](profiles.md)
+           * Profiles as Defined Resources
        * Roles
 * [Distributing Puppet modules](chapter4.md)
 * [Testing Puppet modules](chapter5.md)
