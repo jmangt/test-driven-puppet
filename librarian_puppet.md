@@ -43,6 +43,19 @@ Deploying roles with `librarian-puppet` has a great advantage over the tradition
 
 For example. If our `hotdogcom` role needed an upgrade from its `nagios` dependency, we could generate a feature branch and update our `Puppetfile` with the new experimental version of the `nagios` module. Then we can run the necessary tests and see how the host would be affected.
 
+The `hotdogcom` role's Puppetfile might look like this:
+
+```ruby
+forge "https://forge.puppetlabs.com"
+
+mod 'afriend-nagios', "1.1.0"
+mod 'someguy-graphana', "0.0.3"
+
+mod 'mycompany-wordpress',
+  :git => "git://github.com/mycompany/mycompany-wordpress.git",
+  :ref => "0.1.0"
+```
+
 
 ---
 
