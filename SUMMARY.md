@@ -29,7 +29,6 @@
        * [Masterless Deployment](masterless_deployment.md)
        * [Dependency Blast Radius](dependency_blast_radius.md)
 * [Testing Puppet modules](chapter5.md)
-   * [Test Driven Development](test_driven_development.md)
    * [Rspec](rspec.md)
    * Rspec Puppet
    * Beaker
