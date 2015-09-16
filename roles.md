@@ -11,5 +11,8 @@ For example:
 
 As you might imagine a `web` or `db` host might running many web applications or database instances.
 
-A `role` will need to list all the necessary dependencies for that kind of application to run and probably other technology stacks that help with monitoring or 
+A `role` will need to list all the necessary dependencies for that kind of application to run. And probably other technology stacks that help with monitoring or log management.
+
+
+
 
