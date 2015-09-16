@@ -22,8 +22,11 @@ This `json` file holds important information on:
 * What is the name of the module
 * It's version
 * Where the module is hosted
-* The Operating Systems your module supports
+* The operating systems your module supports
 * And, the module's dependencies
+
+
+
 
 
 
