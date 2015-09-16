@@ -88,14 +88,11 @@ class hotdogcom (
   }
 }
 ```
-
 The pattern might seam a little verbose. But it will give you choice on how to test and deploy your module.
 
 The `params.pp` file checks if the there is a top level variable with the values of the host, port, database name, user or password. If the value is not set it uses a 'development' default.
 
-The value of these top level variables could be set by a custom fact set by a cloud init script, foreman instance or a puppet master.
+The value of these top level variables could be a custom fact set by a cloud init script, foreman instance or a puppet master.
 
-The second part of the pattern is the role's api. 
-
-Repeating the same variables as in parameters allows us to overwrite the defaults set by params. This is a must when it comes to testing your module. Since you want to skip any external dependencies like relying on a facter being set for you from an unknown source.
+The second part of the pattern is the role's api. Repeating the same variables as in parameters allows us to overwrite the defaults set by params. This is a must when it comes to testing your module. Since you want to skip any external dependencies like relying on a facter being set for you from an unknown source.
 
