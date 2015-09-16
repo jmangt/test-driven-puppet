@@ -58,7 +58,7 @@ class hotdogcom::params{
   }
   
   if $::db_user == undef {
-    $db_user = 'my-user'
+    $db_user = 'myuser'
   } else {
     $db_user = $::db_user
   }
@@ -90,6 +90,8 @@ class hotdogcom (
 
 The pattern might seam a little verbose. But it will give you choice on how to test and deploy your module.
 
-The `params.pp` file checks if the 
+The `params.pp` file checks if the there is a top level variable with the values of the host, port, database name, user or password. If the value is not set it uses a 'development' default.
+
+
 
 ```
