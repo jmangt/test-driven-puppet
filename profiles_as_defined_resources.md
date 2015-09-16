@@ -29,10 +29,15 @@ A modified version of the `wordpress` module would move the host configuration t
 
 ```puppet
 # wordpress/manifests/init.pp
-class wordpress (...) {
+class wordpress {
+}
+
+# wordpress/manifests/install.pp
+class wordpress::install(...) {
 }
 
 # wordpress/manifests/host.pp
-define wordpress
+define wordpress::host (
+  name
 ```
 
