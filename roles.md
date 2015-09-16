@@ -41,10 +41,42 @@ class hotdogcom::params{
   
   if $::db_host == undef {
     $db_host = 'localhost'
-    notice("tag_server_env not defined using ${server_env}")
   } else {
-    $server_env = $::tag_server_env
+    $db_host = $::db_host
   }
   
+  if $::db_port == undef {
+    $db_port = '3306'
+  } else {
+    $db_port = $::db_port
+  }
+  
+  if $::db_user == undef {
+    $db_user = 'my-user'
+  } else {
+    $db_user = $::db_user
+  }
+  
+  if $::db_password == undef {
+    $db_password = 'S3cr3t'
+  } else {
+    $db_password = $::db_password
+  }
 }
+
+class hotdogcom (
+  $db_host     = $::hotdogcom::params::db_host,
+  $db_port     = $::hotdogcom::params::db_port,
+  $db_user     = $::hotdogcom::params::db_user,
+  $db_password = $::hotdogcom::params::db_password,
+){
+
+  wordpress::host{'hotdog.com':
+    db_host     => $db_host,
+    db_port     => $db_port,
+    db_user     => $db_user,
+    db_password => $db_password,
+  }
+}
+
 ```
