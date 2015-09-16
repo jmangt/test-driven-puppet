@@ -106,4 +106,4 @@ The value of these top level variables could be a custom fact set by a cloud ini
 
 The second part of the pattern, is the role's api. Repeating the same variables as in parameters allows us to overwrite the defaults set by params. This is a must when it comes to testing your module. Since you want to skip any external dependencies like relying on a fact being set for you from an unknown source.
 
-In the example `site.pp` passes parameters to the `role` by a combination of fixed values and hiera lookups. This allows you to manage different configuration values based on your environment. You probably will have a different db host and credentials if you are running in a `production` or a `staging` environment.
+In the example `site.pp` passes parameters to the `role` by a combination of fixed values and hiera lookups. This allows you to manage different configuration values based on your environment. 
