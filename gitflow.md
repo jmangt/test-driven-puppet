@@ -291,7 +291,7 @@ Summary of actions:
 
 This is a common pitfall when using git flow. If your are done with closing your release branch, you will now have new commits in `master` and `develop`, and a new tag on `master`. These new commits and the new tag need to be pushed to your remote.
 
-So. After your close your release do:
+After your close your release do:
 
 ```bash
 # push master
