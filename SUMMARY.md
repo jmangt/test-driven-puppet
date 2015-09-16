@@ -24,7 +24,7 @@
        * [Roles](roles.md)
 * [Distributing Puppet modules](chapter4.md)
    * [The Puppet Forge](the_puppet_forge.md)
-   * Librarian Puppet
+   * [Librarian Puppet](librarian_puppet.md)
 * [Testing Puppet modules](chapter5.md)
    * Test Driven Development
    * Rspec
