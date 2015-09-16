@@ -4,7 +4,7 @@
 
 Just like the description reads, `librarian-puppet` is a gem that uses a manifest file (Puppetfile) to list all your module's private an public dependencies. And it uses this file to download and install the module's dependencies.
 
-`librarian-puppet` will do the work of resolving the dependency tree of your module. That means finding your dependency's dependencies and determining the minimum acceptable version for each.
+`librarian-puppet` will do the work of resolving the dependency tree of your module, by finding your dependency's dependencies and determining the minimum acceptable version for each.
 
 ### Puppetfile
 
