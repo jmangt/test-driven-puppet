@@ -6,5 +6,6 @@ If you skipped any of the previous chapters be aware that I will base this work 
 
 I believe in learning by doing. As such, in the following sections I will put together a couple of simple modules and build them using a Test Driven approach. 
 
+We will start by writing a simple `users` module, compatible with Ubuntu 14.04. 
 
 
