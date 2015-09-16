@@ -36,7 +36,7 @@ When it comes to parameters, a `role` should pay attention of providing ways to 
 The most common use case if passing database credentials. I suggest using a pattern similar to this:
 
 ```puppet
-hotdogcom/manifest/params.pp
+# hotdogcom/manifests/params.pp
 class hotdogcom::params{
   
   if $::db_host == undef {
@@ -64,6 +64,7 @@ class hotdogcom::params{
   }
 }
 
+# hotdogcom/manifests/init.pp
 class hotdogcom (
   $db_host     = $::hotdogcom::params::db_host,
   $db_port     = $::hotdogcom::params::db_port,
