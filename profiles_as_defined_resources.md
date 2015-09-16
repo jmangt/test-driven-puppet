@@ -33,7 +33,9 @@ class wordpress {
 }
 
 # wordpress/manifests/install.pp
-class wordpress::install(...) {
+class wordpress::install {
+  include apache
+  include php
 }
 
 # wordpress/manifests/site.pp
@@ -42,8 +44,15 @@ define wordpress::host (
 ){
   
   include wordpress::install
-  
-  
+}
+
+# mysharedsite/manifests/init.pp
+class mysharedsite{
+  wordpress::host{'hotdog.com':
+  }
+ 
+  wordpress::host{'blog.hotdog.com':
+  }
 }
 ```
 
