@@ -42,7 +42,6 @@ class wordpress::install {
 define wordpress::host (
   site_name => 'default', 
 ){
-  
   include wordpress::install
 }
 
