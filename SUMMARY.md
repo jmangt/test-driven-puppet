@@ -25,7 +25,7 @@
 * [Distributing Puppet modules](chapter4.md)
    * [The Puppet Forge](the_puppet_forge.md)
    * [Librarian Puppet](librarian_puppet.md)
-       * Puppetfile
+       * [Puppetfile](puppetfile.md)
        * [Masterless Deployment](masterless_deployment.md)
        * [Dependency Blast Radius](dependency_blast_radius.md)
 * [Testing Puppet modules](chapter5.md)
