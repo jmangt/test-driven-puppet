@@ -10,4 +10,14 @@ Remember, that dependent module might be used by other modules besides yours. An
 
 ## The Puppet Forge
 
+The "[Forge](https://forge.puppetlabs.com/)"[1] is the place where all publicly available modules are hosted.
 
+Publishing your own modules is "easy", as long as you follow their conventions. You can read on how to organize and publish your modules in the "[Publishing Modules on the Puppet Forge](https://docs.puppetlabs.com/puppet/latest/reference/modules_publishing.html)"[2] section of the Puppetlabs site.
+
+
+
+---
+
+[1] A repository of modules written by our community for Puppet Open Source and Puppet Enterprise IT automation software:  https://forge.puppetlabs.com/
+
+[2] Publishing Modules on the Puppet Forge :https://docs.puppetlabs.com/puppet/latest/reference/modules_publishing.html
