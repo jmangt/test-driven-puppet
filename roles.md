@@ -64,7 +64,7 @@ class hotdogcom::params{
   }
   
   if $::db_password == undef {
-    $db_password = 'S3cr3t'
+    $db_password = 'password'
   } else {
     $db_password = $::db_password
   }
