@@ -53,9 +53,9 @@ If you have private modules that you are unable to publish in the Forge, [Librar
 
 ### Generating a metadata.json file
 
-You can add a `metadata.json` file to your module in any moment. But if you want to be in accordance to the Forge's standard I would recommend the `puppet module generate` command [5].
+You can add a `metadata.json` file to your module in any moment. But if you want to be in accordance to the Forge's standard I would recommend using the `bash puppet module generate` command [5].
 
-The command will generate a complete scaffold for your module. I will even add some place holders for your tests! 
+The command will generate a complete scaffold for your module.** I will even add some place holders for your tests! **
 
 The previous `metadata.json` file was generated in the following way:
 
