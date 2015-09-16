@@ -8,6 +8,6 @@ This allows you to release new versions of your module, without worrying if any 
 
 There is a catch with this approach. 
 
-Every time you release a new version of a common module, all clients must update to that version also. That means going to each client, generating a feature branch, testing, and generating a new release.
+Every time you release a new version of a common module, all clients must also update to that version. That means going to each client, generating a feature branch, testing, and generating a new release.
 
 I believe the extra work is worth it, since it keeps your safe from a silly mistake to spill to all your client modules.
