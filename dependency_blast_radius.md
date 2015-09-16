@@ -1,6 +1,6 @@
 ### Dependency Blast Radius
 
-A side effect of versioning your dependencies, is that you can safely add features to your modules and not worry if a new release will break other modules. 
+A side effect of versioning your dependencies, is that you can add features to your modules and not worry if a new release will break other modules.
 
 Since the client modules are using a specific version of your module, they will be unaware of any changes until they upgrade the version of your module.
 
