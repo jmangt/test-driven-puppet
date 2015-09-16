@@ -51,6 +51,12 @@ class hotdogcom::params{
     $db_port = $::db_port
   }
   
+  if $::db_name == undef {
+    $db_name = 'hotdogcom'
+  } else {
+    $db_name = $::db_name
+  }
+  
   if $::db_user == undef {
     $db_user = 'my-user'
   } else {
@@ -68,6 +74,7 @@ class hotdogcom::params{
 class hotdogcom (
   $db_host     = $::hotdogcom::params::db_host,
   $db_port     = $::hotdogcom::params::db_port,
+  $db_name     = $::hotdogcom::params::db_name,
   $db_user     = $::hotdogcom::params::db_user,
   $db_password = $::hotdogcom::params::db_password,
 ){
@@ -75,9 +82,14 @@ class hotdogcom (
   wordpress::host{'hotdog.com':
     db_host     => $db_host,
     db_port     => $db_port,
+    db_name     => $db_name,
     db_user     => $db_user,
     db_password => $db_password,
   }
 }
+
+The pattern might seam a little verbose. But it will give you choice on how to test and deploy your module.
+
+The `params.pp` file checks if the 
 
 ```
