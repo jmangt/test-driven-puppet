@@ -6,6 +6,28 @@ Just like the description reads, `librarian-puppet` is a gem that uses a manifes
 
 `librarian-puppet` will do the work of resolving the dependency tree of your module. That means finding your dependency's dependencies and determining the minimum acceptable version for each.
 
+### Puppetfile
+
+A `Puppetfile` looks like this.
+
+```ruby
+forge "https://forge.puppetlabs.com"
+
+mod 'puppetlabs-razor'
+mod 'puppetlabs-ntp', "0.0.3"
+
+mod 'puppetlabs-apt',
+  :git => "git://github.com/puppetlabs/puppetlabs-apt.git"
+
+mod 'puppetlabs-stdlib',
+  :git => "git://github.com/puppetlabs/puppetlabs-stdlib.git"
+
+mod 'puppetlabs-apache', '0.6.0',
+  :github_tarball => 'puppetlabs/puppetlabs-apache'
+```
+
+### Masterless Deployment
+
 By using `librarian-puppet` you can have your own "masterless" deployment for your roles.
 
 In our *hotdog.com* example, the role has one private dependency:
@@ -17,9 +39,10 @@ And the `wordpress` profile needed public dependencies:
 
 If both `hotdogcom` role and and `wordpress` profile are using a `Puppetfile` to declare their dependencies, we can run the `librarian-puppet install` command, and `librarian-puppet` would take care of downloading all the necessary modules into your Puppet modules directory.
 
-Deploying roles using `librarian-puppet`, instead of the common approach of using a Puppet master, has a great advantage. By using the `git flow` methodololy of branching and generate development branches, combined with the 
+Deploying roles using `librarian-puppet`, instead of the common approach of using a Puppet master, has a great advantage. By using the `git flow` methodololy of branching combined with the dependency declaration of the Puppetfile, we can generate a complete new deployment scenario. Both for our current module as with it's dependencies.
 
-In these branches you can switch your dependencies to a specif version or development branch of their own. Then using the updated `Puppetfile` in branch you can test how your host will provision with that particular configuration.
+For example. If our `hotdogcom`
+
 
 ---
 
