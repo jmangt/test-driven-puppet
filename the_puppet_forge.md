@@ -4,7 +4,7 @@ The "[Forge](https://forge.puppetlabs.com/)"[1] is the place where all publicly 
 
 Publishing your own modules is "easy", as long as you follow their conventions. You can read on how to organize and publish your modules in the "[Publishing Modules on the Puppet Forge](https://docs.puppetlabs.com/puppet/latest/reference/modules_publishing.html)"[2] section of the Puppetlabs site.
 
-### Module definition
+### Module definition and dependencies
 
 The way that the Forge declares a module and it dependencies is the [`metadata.json](https://docs.puppetlabs.com/puppet/latest/reference/modules_publishing.html#write-a-metadatajson-file)`[3] file. 
 
