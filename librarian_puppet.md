@@ -17,7 +17,7 @@ And the `wordpress` profile needed public dependencies:
 
 If both `hotdogcom` role and and `wordpress` profile are using a `Puppetfile` to declare their dependencies, we can run the `librarian-puppet install` command, and `librarian-puppet` would take care of downloading all the necessary modules into your Puppet modules directory.
 
-Deploying roles using `librarian-puppet` instead of the common approach of using a Puppet master has a great advantage. You can use the `git flow` methodololy of branching and generate development branches. 
+Deploying roles using `librarian-puppet`, instead of the common approach of using a Puppet master, has a great advantage. By using the `git flow` methodololy of branching and generate development branches, combined with the 
 
 In these branches you can switch your dependencies to a specif version or development branch of their own. Then using the updated `Puppetfile` in branch you can test how your host will provision with that particular configuration.
 
