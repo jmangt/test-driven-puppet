@@ -2,7 +2,7 @@
 
 There is a side effect of versioning your dependencies.
 
-When client modules are use a specific version of your module, they will be unaware of any changes until they upgrade the version of your module.
+When client modules are using a specific version of your module, they will be unaware of any changes until they upgrade the version of your module.
 
 This allows you to release new versions of your module, without worrying if any clients will break. And it also keeps the clients safe when you introduce a bug in a new release.
 
