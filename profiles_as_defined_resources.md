@@ -25,3 +25,14 @@ This would fail with a `Error: Duplicate declaration: ... is already declared in
 
 If we want to avoid this our `wordpress` profile should be re writen as a custom resource. The concept behind what the profile does remains the same. We just need some syntax re adjustments.
 
+A modified version of the `wordpress` module would move the host configuration to a different file. The `wordpress` class changes to becomes just a place holder for the namespace.
+
+```puppet
+# wordpress/manifests/init.pp
+class wordpress (...) {
+}
+
+# wordpress/manifests/host.pp
+define wordpress
+```
+
