@@ -27,6 +27,7 @@
    * [Librarian Puppet](librarian_puppet.md)
        * Puppetfile
        * Masterless Deployment
+       * Dependency Blast Radius
 * [Testing Puppet modules](chapter5.md)
    * Test Driven Development
    * Rspec
