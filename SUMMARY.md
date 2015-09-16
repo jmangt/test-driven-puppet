@@ -26,6 +26,7 @@
    * [The Puppet Forge](the_puppet_forge.md)
    * [Librarian Puppet](librarian_puppet.md)
        * Puppetfile
+       * Masterless Deployment
 * [Testing Puppet modules](chapter5.md)
    * Test Driven Development
    * Rspec
