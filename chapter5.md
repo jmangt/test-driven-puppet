@@ -10,6 +10,8 @@ I believe in learning by doing. As such, in the following sections I will put to
 
 We'll start by writing a simple `users` module compatible with Ubuntu 14.04. In order to start with the right foot we will use the `puppet module generate` command and use the included `rspec` gem to test our clases. Then we will use the `beaker` gem to run acceptance tests by generating a virtual machine, applying our module an testing for expected outcome.
 
+I will do my development from inside a Vagrant box running Puppet 4.2.2 and Ruby 2.2.1.
+
 Ready? Here we go...
 
 
