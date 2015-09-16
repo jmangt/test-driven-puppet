@@ -33,7 +33,7 @@ class hotdogcom{
 
 When it comes to parameters, a `role` should pay attention of providing ways to pass the necessary credentials, hosts and ports that our applications will use.
 
-The most common use case if passing database credentials. I suggest using a pattern similar to this:
+The most common use case if passing database credentials. I suggest using a three part pattern:
 
 ```puppet
 # hotdogcom/manifests/params.pp
@@ -87,6 +87,17 @@ class hotdogcom (
     db_password => $db_password,
   }
 }
+
+# site.pp
+
+class{'hotdogcom':
+  db_host     => 'db.prod.mycorp.com'
+  db_port     => '3306',
+  db_name     => hiera('hotdogcom::db_name'),
+  db_user     => hiera('hotdogcom::db_user'),
+  db_password => hiera('hotdogcom::db_password'),
+}
+
 ```
 The pattern might seam a little verbose. But it will give you choice on how to test and deploy your module.
 
