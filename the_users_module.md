@@ -7,7 +7,7 @@ We use the `myorg` prefix as a way to declare who's user module this is. This is
 Check your options by passing the `--help` flag.
 
 ```bash
-uppet module generate --help
+$ puppet module generate --help
 
 USAGE: puppet module generate [--skip-interview] <name>
 
@@ -23,4 +23,10 @@ OPTIONS:
   --skip-interview               - Bypass the interactive metadata interview
 
 See 'puppet man module' or 'man puppet-module' for full help.
+```
+
+Generate the module and accept the defaults.
+
+```bash
+
 ```
