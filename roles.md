@@ -90,7 +90,7 @@ class hotdogcom (
 
 # site.pp
 class{'hotdogcom':
-  db_host     => 'db.prod.mycorp.com'
+  db_host     => 'db.prod.mycorp.com',
   db_port     => '3306',
   db_name     => hiera('hotdogcom::db_name'),
   db_user     => hiera('hotdogcom::db_user'),
