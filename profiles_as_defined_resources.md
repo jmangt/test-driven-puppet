@@ -36,8 +36,14 @@ class wordpress {
 class wordpress::install(...) {
 }
 
-# wordpress/manifests/host.pp
+# wordpress/manifests/site.pp
 define wordpress::host (
-  name
+  site_name => 'default', 
+){
+  
+  include wordpress::install
+  
+  
+}
 ```
 
