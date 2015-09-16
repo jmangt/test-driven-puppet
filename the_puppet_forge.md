@@ -14,3 +14,4 @@ This `json` file holds important information on:
 * Where the module is hosted
 * The operating systems your module supports
 * And, the module's dependencies
+
