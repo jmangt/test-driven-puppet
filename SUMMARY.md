@@ -23,6 +23,7 @@
            * [Profiles as Defined Resources](profiles_as_defined_resources.md)
        * [Roles](roles.md)
 * [Distributing Puppet modules](chapter4.md)
+   * The Puppet Forge
 * [Testing Puppet modules](chapter5.md)
    * Test Driven Development
    * Rspec
