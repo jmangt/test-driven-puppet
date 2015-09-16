@@ -30,7 +30,7 @@
        * [Dependency Blast Radius](dependency_blast_radius.md)
 * [Testing Puppet modules](chapter5.md)
    * [Test Driven Development](test_driven_development.md)
-   * Rspec
+   * [Rspec](rspec.md)
    * Rspec Puppet
    * Beaker
    * Rspec Beaker
