@@ -28,5 +28,6 @@ See 'puppet man module' or 'man puppet-module' for full help.
 Generate the module and accept the defaults.
 
 ```bash
+$ 
 
 ```
