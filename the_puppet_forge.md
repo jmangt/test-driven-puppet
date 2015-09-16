@@ -47,7 +47,9 @@ This is an example of an `metadata.json`:
 }
 ```
 
-All the dependencies declared within the `metadata.json` are modules hosted in the Forge. If your dependencies are not publicly available then *you can not declare them here*.
+All the dependencies declared within the `metadata.json` are modules hosted in the Forge. If your dependencies are not publicly available then *you can not declare them here*. 
+
+If you have private modules that you are unable to publish in the Forge, `[librarian-puppet](http://librarian-puppet.com/)` provides an alternative to manage them.
 
 
 ---
@@ -57,3 +59,5 @@ All the dependencies declared within the `metadata.json` are modules hosted in t
 [2] Publishing Modules on the Puppet Forge: https://docs.puppetlabs.com/puppet/latest/reference/modules_publishing.html
 
 [3] Write a metadata.json File: https://docs.puppetlabs.com/puppet/latest/reference/modules_publishing.html#write-a-metadatajson-file
+
+[4] librarian-puppet: http://librarian-puppet.com/
