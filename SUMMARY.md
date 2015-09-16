@@ -33,4 +33,5 @@
    * Rspec Puppet
    * Beaker
    * Rspec Beaker
+   * The users module
 
