@@ -21,11 +21,11 @@ class mysharedsite{
 }
 ```
 
-This would fail with a `Error: Duplicate declaration: ... is already declared in file ...; cannot redeclare at ... on node ...` error.
+This would fail with a `Error: Duplicate declaration: ... is already declared in file ...; cannot re declare at ... on node ...` error.
 
-If we want to avoid this our `wordpress` profile should be re writen as a custom resource. The concept behind what the profile does remains the same. We just need some syntax re adjustments.
+If we want to avoid this, our `wordpress` profile should be re written as a custom resource. The concept behind what the profile does remains the same. We just need some syntax re adjustments.
 
-A modified version of the `wordpress` module would move the host configuration to a different file. The `wordpress` class changes to becomes just a place holder for the namespace.
+A modified version of the `wordpress` module would move the host configuration to a different file. The `wordpress` class changes to becomes just a place holder for the namespace. An any client modules will change to use our new `wordpress::host` resource.
 
 ```puppet
 # wordpress/manifests/init.pp
