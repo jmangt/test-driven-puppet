@@ -28,7 +28,7 @@ mod 'puppetlabs-apache', '0.6.0',
 
 ### Masterless Deployment
 
-By using `librarian-puppet` you can have your own "masterless" deployment for your roles.
+By using `librarian-puppet` you can have your a "masterless" deployment strategy for your roles.
 
 In our *hotdog.com* example, the role has one private dependency:
 1. The `wordpress` profile
