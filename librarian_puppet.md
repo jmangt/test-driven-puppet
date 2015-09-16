@@ -33,7 +33,7 @@ By using `librarian-puppet` you can have your a "masterless" deployment strategy
 In our *hotdog.com* example, the role has one private dependency:
 1. The `wordpress` profile
 
-And the `wordpress` profile needed public dependencies:
+And the `wordpress` profile has two public dependencies:
 1. The `apache` module
 2. And, the `php` module
 
