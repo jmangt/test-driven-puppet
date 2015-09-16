@@ -89,7 +89,6 @@ class hotdogcom (
 }
 
 # site.pp
-
 class{'hotdogcom':
   db_host     => 'db.prod.mycorp.com'
   db_port     => '3306',
