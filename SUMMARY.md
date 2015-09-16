@@ -29,9 +29,9 @@
        * [Masterless Deployment](masterless_deployment.md)
        * [Dependency Blast Radius](dependency_blast_radius.md)
 * [Testing Puppet modules](chapter5.md)
+   * The users module
    * [Rspec](rspec.md)
    * Rspec Puppet
    * Beaker
    * Rspec Beaker
-   * The users module
 
