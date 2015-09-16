@@ -41,7 +41,7 @@ If both `hotdogcom` role and and `wordpress` profile are using a `Puppetfile` to
 
 Deploying roles with `librarian-puppet` has a great advantage over the traditional Puppet Master approach. By using the `git flow` methodololy, combined with the dependency declaration of the Puppetfile, we can generate a new deployment scenario for both for our current module as with it's dependencies.
 
-For example. If our `hotdogcom`
+For example. If our `hotdogcom` role needed an upgrade from its `nagios` dependency, we could generate a feature branch and update our `Puppetfile` with the new experimental version of the `nagios` module. Then we can run the necessary tests and see how the host would be affected.
 
 
 ---
