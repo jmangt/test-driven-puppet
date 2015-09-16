@@ -25,6 +25,7 @@
 * [Distributing Puppet modules](chapter4.md)
    * [The Puppet Forge](the_puppet_forge.md)
    * [Librarian Puppet](librarian_puppet.md)
+       * Puppetfile
 * [Testing Puppet modules](chapter5.md)
    * Test Driven Development
    * Rspec
