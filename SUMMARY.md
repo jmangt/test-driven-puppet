@@ -21,7 +21,7 @@
            * [Example: Wordpress](example_wordpress.md)
            * [Example: Node.js](example_nodejs.md)
            * [Profiles as Defined Resources](profiles_as_defined_resources.md)
-       * Roles
+       * [Roles](roles.md)
 * [Distributing Puppet modules](chapter4.md)
 * [Testing Puppet modules](chapter5.md)
    * Test Driven Development
