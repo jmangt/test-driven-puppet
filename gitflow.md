@@ -285,6 +285,25 @@ Summary of actions:
 - You are now on branch 'develop'
 ```
 
+### A word of caution
+
+**Remember to push your branches and your tags!!!**
+
+This is a common pitfall when using git flow. If your are done with closing your release branch, you will now have new commits in `master` and `develop`, and a new tag on `master`. These new commits and the new tag need to be pushed to your remote.
+
+So. After your close your release do:
+
+```bash
+# push master
+vagrant:(master)$ git push origin master
+
+# push your tag
+vagrant:(master)$ git push --tags origin
+
+# push develop
+vagrant:(develop)$ git push origin develop
+```
+
 ---
 
 [1] A successful Git branching model: http://nvie.com/posts/a-successful-git-branching-model/
