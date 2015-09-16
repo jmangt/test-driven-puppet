@@ -60,4 +60,4 @@ If you have private modules that you are unable to publish in the Forge, `[libra
 
 [3] Write a metadata.json File: https://docs.puppetlabs.com/puppet/latest/reference/modules_publishing.html#write-a-metadatajson-file
 
-[4] librarian-puppet: http://librarian-puppet.com/
+[4] librarian-puppet - You can all stop using git submodules now: http://librarian-puppet.com/
