@@ -100,12 +100,12 @@ Now that we have a scaffold for our module, let's setup our development work flo
 
 ### RVM
 
-Add a ruby version and gemset to your module. This will allow other developers using RVM to get an exact version of your development environment. I will use Puppet 4.2.2 and Ruby 2.2.1 for running this module.
+Add a ruby version and gemset to your module. This will allow other developers using RVM to get an exact version of your development environment. I will use a Puppet 4.2.2 gemset running Ruby 2.2.1 for this module.
 
 ```bash
 $ cd /vagrant/user
 $ touch '2.2.1' > .ruby-version
-$ touch '
+$ touch 'puppet-4.2.2' > .ruby-gemset
 ```
 
 ### Git
