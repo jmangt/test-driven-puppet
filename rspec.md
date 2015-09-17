@@ -35,7 +35,7 @@ describe 'Dog' do
   context 'when sleeping' do
     describe '#bark' do
       it 'should not bark' do
-        expect(Dog.bark).to be_silent
+        expect(Dog.bark).to == nil
       end
     end
   end
@@ -43,7 +43,7 @@ describe 'Dog' do
   context 'when awake' do
     describe 'bark' do
       it 'should be loud' do
-        expect(Dog.bark).to be_loud
+        expect(Dog.bark).to == 'WOOF!"
       end
     end
   end
