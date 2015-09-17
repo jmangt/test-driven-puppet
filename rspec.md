@@ -58,7 +58,7 @@ Take some time to go through the ["Getting Started](https://relishapp.com/rspec/
 
 ### Assertions
 
-An assertion or expectation is the code that tests your SUBJECT's behaviour. 
+An assertion or expectation is the code that tests your SUBJECT's behavior. 
 
 
 ---
