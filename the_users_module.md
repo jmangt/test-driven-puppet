@@ -118,7 +118,15 @@ $ tree
 4 directories, 9 files
 ```
 
-The files purpose is as follows:
+Here is a brief description of each of the files and directories. For a detail description of how a Puppet module is structured please read the ["Module Layou](https://docs.puppetlabs.com/puppet/latest/reference/modules_fundamentals.html#module-layout)t" section of the ["Module Fundamentals](https://docs.puppetlabs.com/puppet/latest/reference/modules_fundamentals.html#module-fundamentals)" page in the Puppetlabs site.
+
+#### The manifests directory
+
+All your module files will be placed under the `manifests` directory. This is the code that it will be used by Puppet to provision your host.
+
+If a file is placed outside of this directory it will not be available for Puppet to use.
+
+
 
 
 
