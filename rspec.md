@@ -15,7 +15,7 @@ gem 'facter', '>= 1.7.0'
 
 Within the declared dependencies you will see the `puppetlabs_spec_helper` gem. This gem contains dependencies that will help us test our modules. Please take a look a the[ README](https://github.com/puppetlabs/puppetlabs_spec_helper) [1] file from the project's github repository.
 
-Inside the depedencies of `puppetlabs_spec_helper` is the `rspec` gem.
+Inside the dependencies of `puppetlabs_spec_helper` is the `rspec` gem. Rspec provides a way to describe 
 
 
 
