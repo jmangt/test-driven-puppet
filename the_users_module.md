@@ -103,7 +103,6 @@ $ cd /vagrant/users
 $ tree
 .
 ├── Gemfile
-├── Gemfile.lock
 ├── manifests
 │   └── init.pp
 ├── metadata.json
@@ -118,6 +117,12 @@ $ tree
 
 4 directories, 9 files
 ```
+
+The files purpose is as follows:
+
+
+
+
 ---
 
 [1] I've hosted this sample module in my github.com account. Please feel free to clone or submit pull requests to it. https://github.com/jmangt/jmangt-users
