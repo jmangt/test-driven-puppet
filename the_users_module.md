@@ -94,9 +94,41 @@ users/tests/init.pp
 
 When the `generate` command finishes it's run your will have a new `users` module ready to be tested.
 
+### Setup Work Flow
 
+Now that we have a scaffold for our module, let's setup our development work flow.
 
+### Git
 
+Add version control to the new `users` module.
+
+```bash
+$ cd /vagrant/users
+$ git init .
+
+# Commit your changes
+$ git add .
+$ git commit -m "Initial commit"
+
+# Add a remote to your repository.
+$ git remote add origin https://github.com/jmangt/jmangt-users.git
+
+# Initialize Gitflow
+$ git flow init -d
+
+$ git branch
+* develop
+  master
+```
+
+### RVM
+
+Add a ruby version and gemset to your module. This will allow other developers using RVM to get an exact version of your development environment.
+
+```bash
+$ cd /vagrant/user
+$ touch '
+```
 ---
 
 [1] I've hosted this sample module in my github.com account. Please feel free to clone or submit pull requests to it. https://github.com/jmangt/jmangt-users
