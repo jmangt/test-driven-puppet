@@ -8,8 +8,8 @@ Add a ruby version and gemset to your module. This will allow other developers u
 
 ```bash
 $ cd /vagrant/users
-$ touch '2.2.1' > .ruby-version
-$ touch 'puppet-4.2.2' > .ruby-gemset
+$ echo '2.2.1' > .ruby-version
+$ echo 'puppet-4.2.2' > .ruby-gemset
 ```
 
 ### Bundler 
