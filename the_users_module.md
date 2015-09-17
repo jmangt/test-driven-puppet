@@ -25,7 +25,7 @@ OPTIONS:
 See 'puppet man module' or 'man puppet-module' for full help.
 ```
 
-Generate the module and accept the defaults.
+Generate the module and answer the appropriate questions. [1]
 
 ```
 $ cd /vagrant
@@ -90,5 +90,13 @@ users/spec/classes/init_spec.rb
 users/spec/spec_helper.rb
 users/tests
 users/tests/init.pp
-
 ```
+
+When the `generate` command finishes it's run your will have a new `users` module ready to be tested.
+
+
+
+
+---
+
+[1] I've hosted this sample module in my github.com account. Please feel free to clone or submit pull requests to it. https://github.com/jmangt/jmangt-users
