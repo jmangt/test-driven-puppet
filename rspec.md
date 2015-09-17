@@ -45,7 +45,7 @@ describe 'Dog' do
   context 'when awake' do
     describe 'bark' do
       it 'should be loud' do
-        expect(Dog.bark).to == 'WOOF!"
+        expect(Dog.bark).to == 'WOOF!'
       end
     end
   end
