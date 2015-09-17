@@ -77,7 +77,7 @@ You can list all the available `rake` tasks by running the `rake help` command i
 
 ```bash
 $ cd /vagrant/users
-$ rake -vT
+$ rake help
 rake beaker            # Run beaker acceptance tests
 rake beaker_nodes      # List available beaker nodesets
 rake build             # Build puppet module package
