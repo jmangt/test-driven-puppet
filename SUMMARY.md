@@ -31,6 +31,7 @@
 * [Testing Puppet modules](chapter5.md)
    * [The users module](the_users_module.md)
    * [Development Setup](work_flow_setup.md)
+       * Running Rspec Tests
    * [Rspec](rspec.md)
        * Rspec Syntax
    * Rspec Puppet
