@@ -54,6 +54,12 @@ end
 
 [The Rspec documentation](https://relishapp.com/rspec/) [4] site is the resource to use when it comes to syntax and features. So I will not go into to much detail into it. 
 
+Take some time to go through the ["Getting Started](https://relishapp.com/rspec/docs/gettingstarted)" [5] section of the site if you want to go deep on how to use Rspec with a Ruby project.
+
+### Assertions
+
+An assertion or expectation is the code that tests your SUBJECT's behaviour. 
+
 
 ---
 
@@ -64,3 +70,5 @@ end
 [3] Rspec-Puppet - RSpec tests for your Puppet manifests: http://rspec-puppet.com/
 
 [4] Relish Rspec: https://relishapp.com/rspec/
+
+[5] Rspec Getting Started Guide: https://relishapp.com/rspec/docs/gettingstarted
