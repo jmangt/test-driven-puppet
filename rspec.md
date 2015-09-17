@@ -58,9 +58,9 @@ Take some time to go through the ["Getting Started](https://relishapp.com/rspec/
 
 ### Assertions
 
-An assertion or expectation is the code that tests your SUBJECT's behavior. In the dog example the `it do ... end` blocks are the ones that contain the assertion.
+An assertion or expectation is the code that tests your SUBJECT's behavior. In the Dog example the `it do ... end` blocks are the ones that contain the assertion.
 
-In the first scenario the assertion expect that the Dog won't bark if it is asleep. If the Dog's bark would have been something different from `nil` Rspec would have marked the test as failed.
+In the first scenario the assertion expects that the Dog won't bark if it is asleep. If the Dog's bark would have been something different from `nil` Rspec would have marked the test as failed.
 
 
 
