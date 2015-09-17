@@ -30,9 +30,9 @@
        * [Dependency Blast Radius](dependency_blast_radius.md)
 * [Testing Puppet modules](chapter5.md)
    * [The users module](the_users_module.md)
+   * [Work flow setup](work_flow_setup.md)
    * [Rspec](rspec.md)
    * Rspec Puppet
    * Beaker
    * Rspec Beaker
-   * [Work flow setup](work_flow_setup.md)
 
