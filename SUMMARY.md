@@ -34,4 +34,5 @@
    * Rspec Puppet
    * Beaker
    * Rspec Beaker
+   * Work flow setup
 
