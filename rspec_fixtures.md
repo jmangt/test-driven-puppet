@@ -1,26 +1,6 @@
 ### Our first test
 
-Take a look at the files `puppet module generate` created for you.
 
-```bash
-tree
-.
-├── Gemfile
-├── Gemfile.lock
-├── manifests
-│   └── init.pp
-├── metadata.json
-├── Rakefile
-├── README.md
-├── spec
-│   ├── classes
-│   │   └── init_spec.rb
-│   └── spec_helper.rb
-└── tests
-    └── init.pp
-
-4 directories, 9 files
-```
 
 The `puppet module generate` command created a test place holders for your.
 
