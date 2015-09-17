@@ -52,6 +52,9 @@ describe 'Dog' do
 end
 ```
 
+[The Rspec documentation](https://relishapp.com/rspec/) [4] site is the resource to use when it comes to syntax and features. So I will not go into to much detail on it. 
+
+
 ---
 
 [1] puppetlabs_spec_helper gem - This repository is meant to provide a single source of truth for how to initialize different Puppet versions for spec testing :https://github.com/puppetlabs/puppetlabs_spec_helper
@@ -59,3 +62,5 @@ end
 [2] Rspec - Behaviour Driven Development for Ruby: http://rspec.info/
 
 [3] Rspec-Puppet - RSpec tests for your Puppet manifests: http://rspec-puppet.com/
+
+[4] Relish Rspec: https://relishapp.com/rspec/
