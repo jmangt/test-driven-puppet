@@ -62,6 +62,17 @@ An assertion or expectation is the code that tests your SUBJECT's behavior. In t
 
 In the first scenario the assertion expects that the Dog won't bark if it is asleep. If the Dog's bark would have been something different from `nil` Rspec would have marked the test as failed.
 
+We will use the same logic to test our Puppet modules. But the expected behavior will be checking if the intended Puppet resources are being correctly declared in the compiled manifest.I will go a bit deeper into this in following sections.
+
+
+### Running specs
+
+If you were running a pure Ruby project your would run the `rspec` command in the root of your project to run your tests.
+
+In our Rspec Puppet setup, the `puppet_spec_helper` gems provides various `rake tasks` that will help you run the tests.
+
+The `rake` gem is Ruby's version of `make`. It is used to write simple tasks 
+
 
 
 
