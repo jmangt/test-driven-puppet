@@ -1,4 +1,4 @@
-### Setup Work Flow
+### Setup
 
 Now that we have a scaffold for our module, let's setup our development work flow.
 
