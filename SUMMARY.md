@@ -33,7 +33,7 @@
    * [Development Setup](work_flow_setup.md)
    * [Rspec](rspec.md)
        * Rspec Syntax
-       * Running Rspec Tests
+       * [Running Rspec Tests](running_rspec_tests.md)
    * Rspec Puppet
    * Beaker
    * Rspec Beaker
