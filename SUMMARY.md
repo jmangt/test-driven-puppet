@@ -32,7 +32,7 @@
    * [The users module](the_users_module.md)
    * [Development Setup](work_flow_setup.md)
    * [Rspec](rspec.md)
-       * Rspec Syntax
+       * [Rspec Syntax](rspec_syntax.md)
        * [Running Rspec Tests](running_rspec_tests.md)
    * Rspec Puppet
    * Beaker
