@@ -27,7 +27,7 @@ The basic idea is that your declare A SUBJECT to describe. Then you present a CO
 
 Rspec expects your to place your files under a `specs` directory directly in your projects root. And each test file has to be named in the `*_spec.rb` form. 
 
-An example for describing a DOG SUBJECT would look like this:
+An example for describing a DOG would look like this:
 
 ```ruby
 # dogs/spec/dog_spec.rb
