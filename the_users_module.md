@@ -128,7 +128,6 @@ If a file is placed outside of this directory it will not be available for Puppe
 
 #### The spec directory
 
-
 #### The tests directory
 
 #### Gemfile
