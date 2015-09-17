@@ -2,7 +2,7 @@
 
 Rspec uses a nice human readable syntax to describe your features. It follows commonly used convention for writing "user stories". 
 
-The basic idea is that your declare A SUBJECT to describe. Then you present a CONTEXT where this SUBJECT is to be tested. Within the CONTEXT you DESCRIBE a feature of your SUBJECT. An finally you ASSERT if the SUBJECT responded as expected.
+The basic idea is that your declare A SUBJECT to describe. Then you present a CONTEXT where this SUBJECT is to be tested. Within the CONTEXT you DESCRIBE a feature of your SUBJECT. An finally you ASSERT if the FEATURE responded as expected.
 
 Rspec expects your to place your files under a `specs` directory directly in your projects root. And each test file has to be named in the `*_spec.rb` form. 
 
