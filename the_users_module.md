@@ -95,7 +95,6 @@ users/tests/init.pp
 When the `generate` command finishes it's run your will have a new `users` module ready to be tested.
 
 
-
 ---
 
 [1] I've hosted this sample module in my github.com account. Please feel free to clone or submit pull requests to it. https://github.com/jmangt/jmangt-users
