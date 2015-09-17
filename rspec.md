@@ -73,7 +73,7 @@ In our Rspec Puppet setup, the `puppet_spec_helper` gems provides various `rake 
 
 The `rake` gem is Ruby's version of `make`. It is used to write simple tasks like database migrations, log or cache cleanup, and in our case running Puppet tests.
 
-You can list all the available `rake` tasks by running the `rake -vT` command in your module's root.
+You can list all the available `rake` tasks by running the `rake help` command in your module's root.
 
 ```bash
 $ cd /vagrant/users
