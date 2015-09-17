@@ -174,11 +174,15 @@ $ git remote add origin https://github.com/jmangt/jmangt-users.git
 Initialize Gitflow
 ```bash
 # Initialize Gitflow
+$ cd /vagrant/users
 $ git flow init -d
 
 $ git branch
 * develop
   master
+  
+$ git add .
+$ git commit -am "Initialized Gitflow"
 ```
 
 
