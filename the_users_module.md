@@ -94,6 +94,8 @@ users/tests/init.pp
 
 When the `generate` command finishes it's run your will have a new `users` module ready to be tested.
 
+### Directory Structure
+
 
 ---
 
