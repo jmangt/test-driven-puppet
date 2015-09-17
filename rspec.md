@@ -25,7 +25,7 @@ Rspec uses a nice human readable syntax to describe your features. It follows co
 
 Rspec expects your to place your files under a `specs` directory directly in your projects root. And each test file has to be named in the `*_spec.rb` form. 
 
-An example for describing a DOG SUBJECT would look like:
+An example for describing a DOG SUBJECT would look like this:
 
 ```ruby
 # dogs/spec/dog_spec.rb
