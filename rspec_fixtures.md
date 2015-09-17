@@ -1,4 +1,30 @@
-### Rspec Fixtures
+### Our first test
+
+Take a look at the files `puppet module generate` created for you.
+
+```bash
+tree
+.
+├── Gemfile
+├── Gemfile.lock
+├── manifests
+│   └── init.pp
+├── metadata.json
+├── Rakefile
+├── README.md
+├── spec
+│   ├── classes
+│   │   └── init_spec.rb
+│   └── spec_helper.rb
+└── tests
+    └── init.pp
+
+4 directories, 9 files
+```
+
+The `puppet module generate` command created a test place holders for your.
+
+Take a look a the
 
 Now this is a tricky one. Go ahead and run the default test that `puppet module generate` created for your.
 
