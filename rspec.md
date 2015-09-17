@@ -19,7 +19,35 @@ Inside the dependencies of `puppetlabs_spec_helper` is the `rspec` gem [2].
 
 Rspec provides a way to describe and test Ruby code. And with the help of the `rspec-puppet` gem [3], we should be able to test the syntax, dependency and manifest resolution of our Puppet code.
 
+### Rspec Syntax
 
+Rspec uses a nice human readable syntax to describe your features. It follows commonly used convention for writing "user stories". The basic idea is that your declare A SUBJECT to describe. Then you present a CONTEXT where this SUBJECT is to be tested. Within the CONTEXT you DESCRIBE usage scenarios that your SUBJECT is exposed to. An finally you ASSERT if the SUBJECT responded as expected.
+
+Rspec expects your to place your files under a `specs` directory directly in your projects root. And each test file has to be named in the `*_spec.rb` form. 
+
+An example for describing a DOG SUBJECT would look like:
+
+```ruby
+# dogs/spec/dog_spec.rb
+require 'spec_helper'
+
+describe 'Dog' do
+  context 'when sleeping' do
+    describe '#bark' do
+      it 'should not bark' do
+      end
+    end
+  end
+  
+  context 'when awake' do
+    describe 'bark' do
+      it 'should be loud' do
+      end
+    end
+  end
+end
+
+```
 
 ---
 
