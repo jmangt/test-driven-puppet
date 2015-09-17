@@ -131,7 +131,11 @@ If a file is placed outside of this directory it will not be available for Puppe
 
 #### The tests directory
 
+#### Gemfile
 
+#### metadata.json
+
+#### Rakefile
 ---
 
 [1] I've hosted this sample module in my github.com account. Please feel free to clone or submit pull requests to it. https://github.com/jmangt/jmangt-users
