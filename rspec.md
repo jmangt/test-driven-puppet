@@ -97,8 +97,7 @@ rake syntax:templates  # Syntax check Puppet templates
 rake validate          # Check syntax of Ruby files and call :syntax and :metadata / Validate manifests, templates, and ruby files
 ```
 
-
-
+Must of the time we will use the `rake spec` command to run our module's tests.
 
 ---
 
