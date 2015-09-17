@@ -65,7 +65,7 @@ In the first scenario the assertion expects that the Dog won't bark if it is asl
 We will use the same logic to test our Puppet modules. But the expected behavior will be checking if the intended Puppet resources are being correctly declared in the compiled manifest.I will go a bit deeper into this in following sections.
 
 
-### Running specs
+### Running Tests
 
 If you were running a pure Ruby project your would run the `rspec` command in the root of your project to run your tests.
 
