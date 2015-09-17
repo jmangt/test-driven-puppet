@@ -19,11 +19,6 @@ Inside the dependencies of `puppetlabs_spec_helper` is the `rspec` gem [2].
 
 Rspec provides a way to describe and test Ruby code. And with the help of the `rspec-puppet` gem [3], we should be able to test the syntax, dependency and manifest resolution of our Puppet code.
 
-
-
-
-
-
 ---
 
 [1] puppetlabs_spec_helper gem - This repository is meant to provide a single source of truth for how to initialize different Puppet versions for spec testing :https://github.com/puppetlabs/puppetlabs_spec_helper
