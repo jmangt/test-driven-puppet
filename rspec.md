@@ -26,7 +26,3 @@ Rspec provides a way to describe and test Ruby code. And with the help of the `r
 [2] Rspec - Behaviour Driven Development for Ruby: http://rspec.info/
 
 [3] Rspec-Puppet - RSpec tests for your Puppet manifests: http://rspec-puppet.com/
-
-[4] Relish Rspec: https://relishapp.com/rspec/
-
-[5] Rspec Getting Started Guide: https://relishapp.com/rspec/docs/gettingstarted
