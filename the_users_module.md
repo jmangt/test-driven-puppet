@@ -96,7 +96,28 @@ When the `generate` command finishes it's run your will have a new `users` modul
 
 ### Directory Structure
 
+Take a look at the files `puppet module generate` created for you.
 
+```bash
+$ cd /vagrant/users
+$ tree
+.
+├── Gemfile
+├── Gemfile.lock
+├── manifests
+│   └── init.pp
+├── metadata.json
+├── Rakefile
+├── README.md
+├── spec
+│   ├── classes
+│   │   └── init_spec.rb
+│   └── spec_helper.rb
+└── tests
+    └── init.pp
+
+4 directories, 9 files
+```
 ---
 
 [1] I've hosted this sample module in my github.com account. Please feel free to clone or submit pull requests to it. https://github.com/jmangt/jmangt-users
