@@ -118,7 +118,7 @@ $ tree
 4 directories, 9 files
 ```
 
-Here is a brief description of each of the files and directories. For a detail description of how a Puppet module is structured please read the ["Module Layou](https://docs.puppetlabs.com/puppet/latest/reference/modules_fundamentals.html#module-layout)t" section of the ["Module Fundamentals](https://docs.puppetlabs.com/puppet/latest/reference/modules_fundamentals.html#module-fundamentals)" page in the Puppetlabs site.
+Here is a brief description of each of the files and directories your module contains. For a detail description of how a Puppet module is structured please read the ["Module Layout"](https://docs.puppetlabs.com/puppet/latest/reference/modules_fundamentals.html#module-layoutt" section of the ["Module Fundamentals](https://docs.puppetlabs.com/puppet/latest/reference/modules_fundamentals.html#module-fundamentals)" page in the Puppetlabs site.
 
 #### The manifests directory
 
@@ -134,3 +134,5 @@ If a file is placed outside of this directory it will not be available for Puppe
 ---
 
 [1] I've hosted this sample module in my github.com account. Please feel free to clone or submit pull requests to it. https://github.com/jmangt/jmangt-users
+
+[2] Puppet Module Layout
