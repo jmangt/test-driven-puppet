@@ -98,6 +98,16 @@ When the `generate` command finishes it's run your will have a new `users` modul
 
 Now that we have a scaffold for our module, let's setup our development work flow.
 
+### RVM
+
+Add a ruby version and gemset to your module. This will allow other developers using RVM to get an exact version of your development environment. I will use Puppet 4.2.2 and Ruby 2.2.1 for running this module.
+
+```bash
+$ cd /vagrant/user
+$ touch '2.2.1' > .ruby-version
+$ touch '
+```
+
 ### Git
 
 Add version control to the new `users` module.
@@ -121,14 +131,7 @@ $ git branch
   master
 ```
 
-### RVM
 
-Add a ruby version and gemset to your module. This will allow other developers using RVM to get an exact version of your development environment.
-
-```bash
-$ cd /vagrant/user
-$ touch '
-```
 ---
 
 [1] I've hosted this sample module in my github.com account. Please feel free to clone or submit pull requests to it. https://github.com/jmangt/jmangt-users
