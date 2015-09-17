@@ -32,6 +32,28 @@ This `Gemfile` leaves the option open for you to set the version of `Puppet` tha
 ```bash
 $ cd /vaggrant/users
 $ PUPPET_VERSION=4.2.2 bundle install
+
+$ bundle show
+Gems included by the bundle:
+  * CFPropertyList (2.2.8)
+  * bundler (1.8.4)
+  * diff-lcs (1.2.5)
+  * facter (2.4.4)
+  * hiera (3.0.1)
+  * json_pure (1.8.2)
+  * metaclass (0.0.4)
+  * mocha (1.1.0)
+  * puppet (4.2.2)
+  * puppet-lint (1.1.0)
+  * puppet-syntax (2.0.0)
+  * puppetlabs_spec_helper (0.10.3)
+  * rake (10.4.2)
+  * rspec (3.3.0)
+  * rspec-core (3.3.2)
+  * rspec-expectations (3.3.1)
+  * rspec-mocks (3.3.2)
+  * rspec-puppet (2.2.0)
+  * rspec-support (3.3.0)
 ```
 
 
