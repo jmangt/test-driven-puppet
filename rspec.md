@@ -52,7 +52,7 @@ describe 'Dog' do
 end
 ```
 
-[The Rspec documentation](https://relishapp.com/rspec/) [4] site is the resource to use when it comes to syntax and features. So I will not go into to much detail on it. 
+[The Rspec documentation](https://relishapp.com/rspec/) [4] site is the resource to use when it comes to syntax and features. So I will not go into to much detail into it. 
 
 
 ---
