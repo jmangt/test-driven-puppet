@@ -126,9 +126,10 @@ All your module files will be placed under the `manifests` directory. This is th
 
 If a file is placed outside of this directory it will not be available for Puppet to use.
 
+#### The spec directory
 
 
-
+#### The tests directory
 
 
 ---
