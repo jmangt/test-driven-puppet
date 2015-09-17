@@ -2,7 +2,7 @@
 
 Create a new `users` module using the `puppet module generate myorg-users`.
 
-We use the `myorg` prefix as a way to declare who's user module this is. This is required by the Forge in order to distinguish between two modules with the same name. For example: `bob-apache` and `mike-apache`.
+We use the `myorg` prefix as a way to declare who owns this module. This is required by the Forge in order to distinguish between two modules with the same name. For example: `bob-apache` and `mike-apache`.
 
 Check your options by passing the `--help` flag.
 
