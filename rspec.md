@@ -21,7 +21,9 @@ Rspec provides a way to describe and test Ruby code. And with the help of the `r
 
 ### Rspec Syntax
 
-Rspec uses a nice human readable syntax to describe your features. It follows commonly used convention for writing "user stories". The basic idea is that your declare A SUBJECT to describe. Then you present a CONTEXT where this SUBJECT is to be tested. Within the CONTEXT you DESCRIBE usage scenarios that your SUBJECT is exposed to. An finally you ASSERT if the SUBJECT responded as expected.
+Rspec uses a nice human readable syntax to describe your features. It follows commonly used convention for writing "user stories". 
+
+The basic idea is that your declare A SUBJECT to describe. Then you present a CONTEXT where this SUBJECT is to be tested. Within the CONTEXT you DESCRIBE usage scenarios that your SUBJECT is exposed to. An finally you ASSERT if the SUBJECT responded as expected.
 
 Rspec expects your to place your files under a `specs` directory directly in your projects root. And each test file has to be named in the `*_spec.rb` form. 
 
