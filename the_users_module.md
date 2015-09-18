@@ -188,9 +188,34 @@ Must of the time the default values will just work for you.
 
 #### The tests directory
 
+The Puppetlabs site reads:
 > **Deprecation Warning**: The tests directory is being DEPRECATED in favor of the examples directory. If you use puppet module generate to create your module skeleton, please rename your directory to examples.
 
+The idea behind the tests (examples) directory is to have a way to 'live' test your module. Not a Test Driven kind of test, but more of a 'smoke' kind of test. 
+
+You can read more on smoke testing on the "[Module Smoke Testing](http://docs.puppetlabs.com/guides/tests_smoke.html)" section of the Puppetlabs site.
+
+In a nutshell. You add examples on how to use your module in a `test/init.pp` file. This file can then be run with the `puppet apply --noop` command to check for any compilation errors your module might have.
+
+If you take a look a the `test/init.pp` file provided by `puppet modue generate` you will see a simple `include users` command in it. Which is a very simple way to run your module with all default parameters your `manifest/init.pp` might provide.
+
+
 #### Gemfile
+
+The `Gemfile` provides a manifest of development dependencies for your module. 
+
+Here you declare what version of Puppet do you want to run your tests with, or any other tools you might way to include. The default `Gemfile` looks like this:
+
+```ruby
+# /vagrant/users/Gemfile
+source 'https://rubygems.org'
+
+puppetversion = ENV.key?('PUPPET_VERSION') ? "#{ENV['PUPPET_VERSION']}" : ['>= 3.3']
+gem 'puppet', puppetversion
+gem 'puppetlabs_spec_helper', '>= 0.8.2'
+gem 'puppet-lint', '>= 1.0.0'
+gem 'facter', '>= 1.7.0'
+```
 
 #### metadata.json
 
