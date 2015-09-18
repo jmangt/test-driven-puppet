@@ -204,7 +204,12 @@ If you take a look a the `test/init.pp` file provided by `puppet modue generate`
 
 The `Gemfile` provides a manifest of development dependencies for your module. 
 
-Here you declare what version of Puppet do you want to run your tests with, or any other tools you might way to include. The default `Gemfile` looks like this:
+Here you declare what version of Puppet do you want to run your tests with, or any other tools you might way to include. The default `Gemfile` includes:
+
+* `puppet`
+* `facter`
+* `puppetlabs_spec_helper`. Which contains `rspec` and other test oriented gems.
+* `puppet-lint`. For checking if your module complies with the style guidelines set by the Puppet community.
 
 ```ruby
 # /vagrant/users/Gemfile
