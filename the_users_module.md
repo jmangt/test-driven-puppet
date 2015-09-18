@@ -162,6 +162,9 @@ RSpec.configure do |c|
   c.default_facts = {server_env:      'qa', 
                      tag_app_version: '0.1.0', 
                      fqdn:            'test.hotdog.com'}
+
+  # The path to your hiera.yaml file, if you use Hiera.
+  c.hiera_config = './hiera.yaml'
 end
 ```
 
