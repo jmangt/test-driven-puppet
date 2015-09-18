@@ -207,6 +207,7 @@ The `Gemfile` provides a manifest of development dependencies for your module.
 Here you declare what version of Puppet do you want to run your tests with, or any other tools you might way to include. 
 
 The default `Gemfile` includes:
+
 * `puppet`
 * `facter`
 * `puppetlabs_spec_helper`. Which contains `rspec` and other test oriented gems.
