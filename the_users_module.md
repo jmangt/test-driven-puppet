@@ -128,6 +128,34 @@ If a file is placed outside of this directory it will not be available for Puppe
 
 #### The spec directory
 
+Files under the `spec` directory are used by Rspec to run your tests. 
+
+##### spec_helper.rb
+
+The `spec_helper.rb` file holds Rspec configuration. In it you can specify where to find the different files your module needs to run. For example:
+
+```ruby
+require 'rspec-puppet'
+
+fixture_path = File.expand_path(File.join(__FILE__, '..', 'fixtures'))
+
+RSpec.configure do |c|
+  # The path to the directory containing your modules.
+  c.module_path = File.join(fixture_path, 'modules')
+  
+  # The path to the directory containing your basic manifests like site.pp.
+  c.manifest_dir = File.join(fixture_path, 'manifests') 
+  
+  # The entry-point manifest for Puppet, usually <manifest_dir>/site.pp.
+  c.manifest = File.join(fixture_path, 'manifests', 'default.pp')
+  c.template_dir = File.join(fixture_path, 'template')
+  # c.config = 
+end
+```
+
+Must of the time the default values will just work for you.
+
+
 #### The tests directory
 
 #### Gemfile
