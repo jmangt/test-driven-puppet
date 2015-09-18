@@ -35,7 +35,7 @@
        * [Rspec Syntax](rspec_syntax.md)
        * [Running Rspec Tests](running_rspec_tests.md)
        * [Fixtures](rspec_fixtures.md)
-   * Rspec Puppet
+   * [Rspec Puppet](rspec_puppet.md)
    * Beaker
    * Rspec Beaker
 
