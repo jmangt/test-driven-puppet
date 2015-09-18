@@ -36,7 +36,6 @@
        * [Running Rspec Tests](running_rspec_tests.md)
    * [Rspec Puppet](rspec_puppet.md)
        * [Module Fixtures](module_fixtures.md)
-   * [Fixtures](rspec_fixtures.md)
    * Beaker
    * Rspec Beaker
 
