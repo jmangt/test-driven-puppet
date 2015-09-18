@@ -204,7 +204,9 @@ If you take a look a the `test/init.pp` file provided by `puppet modue generate`
 
 The `Gemfile` provides a manifest of development dependencies for your module. 
 
-Here you declare what version of Puppet do you want to run your tests with, or any other tools you might way to include. The default `Gemfile` includes:
+Here you declare what version of Puppet do you want to run your tests with, or any other tools you might way to include. 
+
+The default `Gemfile` includes:
 
 * `puppet`
 * `facter`
@@ -223,6 +225,8 @@ gem 'facter', '>= 1.7.0'
 ```
 
 #### metadata.json
+
+
 
 #### Rakefile
 ---
