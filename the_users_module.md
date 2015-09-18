@@ -232,6 +232,10 @@ You can read more on it's structure and purpose in the ["Distributing Puppet Mod
 
 
 #### Rakefile
+
+The `Rakefile` is a Ruby file that serves as an entrypoing to running `rake tasks`. 
+
+
 ---
 
 [1] I've hosted this sample module in my github.com account. Please feel free to clone or submit pull requests to it. https://github.com/jmangt/jmangt-users
