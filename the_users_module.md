@@ -148,8 +148,20 @@ RSpec.configure do |c|
   
   # The entry-point manifest for Puppet, usually <manifest_dir>/site.pp.
   c.manifest = File.join(fixture_path, 'manifests', 'default.pp')
+  
+  # The path to the directory where Puppet will look for templates outside of modules.
   c.template_dir = File.join(fixture_path, 'template')
-  # c.config = 
+  
+  # The path to the puppet.conf.
+  c.config = 'puppet.conf'
+  
+  # The path to the main Puppet configuration directory.
+  c.confdir = './config'
+  
+  # A hash of default facts that should be used for all your tests.
+  c.default_facts = {server_env:      'qa', 
+                     tag_app_version: '0.1.0', 
+                     fqdn:            'test.hotdog.com'}
 end
 ```
 
