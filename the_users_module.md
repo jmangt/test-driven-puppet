@@ -226,7 +226,7 @@ gem 'facter', '>= 1.7.0'
 
 #### metadata.json
 
-
+The `metadata.json` file declares the module's name, version, dependencies and restrictions. It is used by the Puppet Forge to index public modules and define dependencies between them.
 
 
 #### Rakefile
