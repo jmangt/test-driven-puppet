@@ -237,6 +237,8 @@ The `Rakefile` is a Ruby file that serves as an entrypoing to running `rake task
 
 Rake is a Make-like program implemented in Ruby. For more information on `rake` your can read the [README](https://github.com/ruby/rake) file in the project's github repository [4].
 
+Rake is a powerful tool since it allows your to automate repetive tasks in an orderly way. Please read [Rake's documentation](http://docs.seattlerb.org/rake/) if you want to take advantage of it's features [5].
+
 ---
 
 [1] I've hosted this sample module in my github.com account. Please feel free to clone or submit pull requests to it. https://github.com/jmangt/jmangt-users
@@ -246,3 +248,5 @@ Rake is a Make-like program implemented in Ruby. For more information on `rake` 
 [3] Module Fundamentals: https://docs.puppetlabs.com/puppet/latest/reference/modules_fundamentals.html#module-fundamentals
 
 [4] Rake: https://github.com/ruby/rake.
+
+[5] Rake Documentation: http://docs.seattlerb.org/rake/
