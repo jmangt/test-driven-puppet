@@ -130,6 +130,22 @@ If a file is placed outside of this directory it will not be available for Puppe
 
 Files under the `spec` directory are used by Rspec to run your tests. 
 
+Different types of resources will have different directories where the tests should be placed. For example:
+
+| Resource | Directory |
+| -- | -- |
+| class | spec/classes |
+| define | spec/defines |
+| host | spec/hosts |
+| function | spec/functions |
+
+
+##### The spec/classes directory
+
+Inside the `spec/classes` is where we place all our test for Puppet classes.
+
+In order for Rspec to use these files as test files their name MUST end with `*_spec.rb`. Any other file will be ignored by Rspec.
+
 ##### spec_helper.rb
 
 The `spec_helper.rb` file holds Rspec configuration. In it you can specify where to find the different files your module needs to run. For example:
@@ -170,13 +186,7 @@ end
 
 Must of the time the default values will just work for you.
 
-##### The spec/classes directory
 
-Inside the `spec/classes` is where we place all our test for Puppet classes.
-
-In order for Rspec to use these files as test files their name MUST end with `*_spec.rb`. Any other file will be ignored by Rspec.
-
-Inside the `spec` directory we can specify different types of resources to test. For example we can add a directory to test "custom defined resources"
 
 
 #### The tests directory
