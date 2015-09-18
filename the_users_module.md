@@ -245,4 +245,4 @@ Rake is a Make-like program implemented in Ruby. For more information on `rake` 
 
 [3] Module Fundamentals: https://docs.puppetlabs.com/puppet/latest/reference/modules_fundamentals.html#module-fundamentals
 
-[4] Rake: https://github.com/ruby/rake
+[4] Rake: https://github.com/ruby/rake.
