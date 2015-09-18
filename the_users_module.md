@@ -186,10 +186,9 @@ end
 
 Must of the time the default values will just work for you.
 
-
-
-
 #### The tests directory
+
+> **Deprecation Warning**: The tests directory is being DEPRECATED in favor of the examples directory. If you use puppet module generate to create your module skeleton, please rename your directory to examples.
 
 #### Gemfile
 
