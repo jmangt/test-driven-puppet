@@ -33,9 +33,9 @@
    * [Development Setup](work_flow_setup.md)
    * [Rspec](rspec.md)
        * [Rspec Syntax](rspec_syntax.md)
-       * [Fixtures](rspec_fixtures.md)
        * [Running Rspec Tests](running_rspec_tests.md)
    * [Rspec Puppet](rspec_puppet.md)
+   * [Fixtures](rspec_fixtures.md)
    * Beaker
    * Rspec Beaker
 
