@@ -235,6 +235,7 @@ You can read more on it's structure and purpose in the ["Distributing Puppet Mod
 
 The `Rakefile` is a Ruby file that serves as an entrypoing to running `rake tasks`. 
 
+Rake is a Make-like program implemented in Ruby. For more information on `rake` your can read the [README](https://github.com/ruby/rake) file in the project's github repository [4].
 
 ---
 
@@ -243,3 +244,5 @@ The `Rakefile` is a Ruby file that serves as an entrypoing to running `rake task
 [2] Puppet Module Layout: https://docs.puppetlabs.com/puppet/latest/reference/modules_fundamentals.html#module-layout
 
 [3] Module Fundamentals: https://docs.puppetlabs.com/puppet/latest/reference/modules_fundamentals.html#module-fundamentals
+
+[4] Rake: https://github.com/ruby/rake
