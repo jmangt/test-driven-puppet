@@ -170,6 +170,14 @@ end
 
 Must of the time the default values will just work for you.
 
+##### The spec/classes directory
+
+Inside the `spec/classes` is where we place all our test for Puppet classes.
+
+In order for Rspec to use these files as test files their name MUST end with `*_spec.rb`. Any other file will be ignored by Rspec.
+
+Inside the `spec` directory we can specify different types of resources to test. For example we can add a directory to test "custom defined resources"
+
 
 #### The tests directory
 
