@@ -84,7 +84,9 @@ The `.fixtures.yml` file has two parts. The first is the `repositories` branch. 
 
 In our example we are adding the Puppet Labs `stdlib` module as a dependency for our module. We are declaring that is going to use the projects github repository to pull the code. And that it would pull from the `4.2.0` git tag. **It is very important that the name of the dependency matches the module's name**. If you don't, Rspec won't be able to find it.
 
-The second part is the `symlinks` branch. Here we specify how *our module* 
+The second part is the `symlinks` branch. Here we specify how our module's code finds it's way into the `spec/fixtures/modules` directory. `rspec-puppet` will create a symlink from our `source_dir` into the `spec/fixtures/modules/MODULE` directory.
+
+
 
 
 
