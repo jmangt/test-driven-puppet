@@ -73,7 +73,7 @@ $ cat <<EOF > .fixtures.yml
 fixtures:
   repositories:
     'stdlib':
-      repo: 'git://github.com/puppetlabs/puppetlabs-stdlib.git'
+      repo: 'https://github.com/puppetlabs/puppetlabs-stdlib.git'
       ref: '4.2.0'
   symlinks:
     'users': '#{source_dir}'
