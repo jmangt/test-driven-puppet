@@ -51,6 +51,12 @@ $ tree -d
 └── tests
 ```
 
-Inside the `users/spec` directory you will see a `fixtures` directory. Rspec uses the fixtures directory to "deploy" your module's code and its dependencies. Rspec expects that your module's code be placed inside the `spec/fixtures/modules/` directory. In the case of the 
+Inside the `users/spec` directory you will see a `fixtures` directory. Rspec uses the fixtures directory to "deploy" your module's code and its dependencies. Rspec expects that your module's code be placed inside the `spec/fixtures/modules/` directory. 
+
+In the case of the `users` module, the module's code should be inside the `spec/fixtures/modules/users` for Rspec to find it.
+
+If the module had any other dependencies, those would need to be placed under the same `spec/fixtures/modules/[depedency]` directory.
+
+
 
 
