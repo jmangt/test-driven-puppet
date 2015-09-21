@@ -1,10 +1,10 @@
 ### Fixtures
 
-The `puppet module generate` command created a test place holders for your.
+When you ran `puppet module generate`, the command generated a scaffold for your test files.
 
-Take a look a the
+At this point you are *almost* ready for running your first test. But as usual there is always that little thing that nobody told you about.
 
-Now this is a tricky one. Go ahead and run the default test that `puppet module generate` created for your.
+Go ahead and run your tests by using the `rake spec` command.
 
 ```bash
 $ cd /vagrant/users
@@ -29,3 +29,28 @@ Failed examples:
 
 rspec ./spec/classes/init_spec.rb:5 # users with defaults for all parameters should contain Class[users]
 ```
+
+If you are seeing an error like this, pay attention to the debug line that reads:
+
+`Evaluation Error: Error while evaluating a Function Call, Could not find class ::users for`
+
+This means that `rspec-puppet` was unable to find your module's code or one of its dependencies.
+
+To understand what this means you need to take a look at your module's directory structure. 
+
+```bash
+$ cd ~/vagrant/users
+$ tree -d
+.
+├── manifests
+├── spec
+│   ├── classes
+│   └── fixtures
+│       ├── manifests
+│       └── modules
+└── tests
+```
+
+Inside the `users/spec` directory you will see a `fixtures` directory. Rspec uses the fixtures directory to "deploy" your module's code and its dependencies. Rspec expects that your module's code be placed inside the `spec/fixtures/modules/` directory. In the case of the 
+
+
