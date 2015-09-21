@@ -80,3 +80,5 @@ fixtures:
 EOF
 ```
 
+The `.fixtures.yml` file 
+
