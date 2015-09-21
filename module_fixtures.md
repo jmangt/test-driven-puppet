@@ -57,6 +57,26 @@ In the case of the `users` module, the module's code should be inside the `spec/
 
 If the module had any other dependencies, those would need to be placed under the same `spec/fixtures/modules/[depedency]` directory.
 
+Since managing this directory structure might cause "confusion and delay", `rpec-puppet` provides an easy way to declare these depedencies using the `.fixtures.yml` file.
 
+### The .fixtures.yml file
 
+The `.fixtures.yml` file is a manifest of your module's depedendencies, used for running `rspec` tests.
+
+The `.fixtures.yml` file should be placed in the root or you module. **REMEMBER THE DOT AT THE START OF THE FILE NAME**.
+
+Create a `.fixtures.yml` file in the root of your module.
+
+```bash
+$ cd ~/vagrant/users
+$ cat <<EOF > .fixtures.yml
+fixtures:
+  repositories:
+    'stdlib':
+      repo: 'git://github.com/puppetlabs/puppetlabs-stdlib.git'
+      ref: '4.2.0'
+  symlinks:
+    'users': '#{source_dir}'
+EOF
+```
 
