@@ -86,7 +86,7 @@ In our example we are adding the Puppet Labs `stdlib` module as a dependency for
 
 The second part is the `symlinks` branch. Here we specify how our module's code finds it's way into the `spec/fixtures/modules` directory. `rspec-puppet` will create a symlink from our `source_dir` into the `spec/fixtures/modules/MODULE` directory.
 
-
+Now 
 
 
 
