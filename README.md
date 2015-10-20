@@ -18,7 +18,7 @@ If you've doing Puppet code for a while you probably are familiar with the phras
 
 You know the drill. 
 
-In essence must of your Puppet code is unreliable. Or it is so brittle that just breathing on it might break it ( or running on the second Monday of the month ).
+In essence must of your Puppet code is unreliable. Or it is so brittle that just breathing on it might break it ( or running it on the second Monday of the month ).
 
 So what can you do to make sure that your Puppet code does what it meant to do? Test it.
 
